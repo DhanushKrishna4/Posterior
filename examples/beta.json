@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "name": "Updating a belief",
+  "parameters": [
+    {
+      "name": "probability",
+      "shape": [],
+      "constraint": {
+        "type": "interval",
+        "lower": 0,
+        "upper": 1
+      }
+    }
+  ],
+  "data": {},
+  "nodes": [],
+  "factors": [
+    {
+      "name": "prior",
+      "distribution": "beta",
+      "value": "probability",
+      "params": {
+        "alpha": 2.0,
+        "beta": 2.0
+      }
+    },
+    {
+      "name": "observations",
+      "distribution": "binomial",
+      "value": 7.0,
+      "params": {
+        "trials": 10.0,
+        "prob": "probability"
+      }
+    }
+  ],
+  "derived": [],
+  "metadata": {
+    "preset": "beta",
+    "config": {
+      "alpha": 2.0,
+      "beta": 2.0,
+      "trials": 10,
+      "successes": 7
+    }
+  },
+  "density_kind": "log joint density"
+}

@@ -1,0 +1,1469 @@
+{
+  "format": "posterior-native-reference-v1",
+  "status": "completed_with_failed_checks",
+  "environment": {
+    "python": "3.14.3",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "posterior": "0.1.0",
+    "emcee": "3.1.6"
+  },
+  "execution": "Local CPU, sequential, single process; no GPU or inference service",
+  "seeds": {
+    "gaussian": 307,
+    "beta": 811
+  },
+  "declared_gates": {
+    "maximum_rhat": 1.03,
+    "minimum_bulk_ess": 200,
+    "minimum_tail_ess": 150,
+    "mean_standard_errors": 5,
+    "mean_absolute_fraction_of_true_sd": 0.04,
+    "covariance_absolute_fraction_of_true_sd_product": 0.18,
+    "quantile_absolute_fraction_of_true_sd": 0.2,
+    "reference_minimum_steps_per_autocorrelation_time": 50
+  },
+  "pilot": {
+    "wall_seconds": 0.5931911250008852,
+    "gradient_evaluations": 5285,
+    "completed_draws": 200,
+    "settings": {
+      "algorithm": "nuts",
+      "chains": 4,
+      "warmup": 50,
+      "draws": 50,
+      "seed": 97,
+      "step_size": 0.15,
+      "steps": 8,
+      "max_depth": 7,
+      "target_accept": 0.85,
+      "iterations": 1000,
+      "batch_size": 8,
+      "learning_rate": 0.03,
+      "initialization": "dispersed",
+      "max_seconds": 120,
+      "max_gradient_evaluations": 500000
+    }
+  },
+  "models": {
+    "gaussian": {
+      "oracle": "Normalized N([0,0], [[1,.95],[.95,1]])",
+      "mean": [
+        0.0,
+        0.0
+      ],
+      "covariance": [
+        [
+          1.0,
+          0.95
+        ],
+        [
+          0.95,
+          1.0
+        ]
+      ],
+      "quantiles_05_50_95": [
+        [
+          -1.6448536269514729,
+          -1.6448536269514729
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.644853626951472,
+          1.644853626951472
+        ]
+      ],
+      "emcee": {
+        "reference": "emcee",
+        "version": "3.1.6",
+        "settings": {
+          "walkers": 16,
+          "warmup_steps": 500,
+          "retained_steps": 2000,
+          "move": "emcee.moves.StretchMove(a=2.0)",
+          "threads": 1
+        },
+        "initialization_seed": 10307,
+        "sampler_randomstate_seed": 10308,
+        "initial_positions": [
+          [
+            0.7983357410142963,
+            -0.46703373462780384
+          ],
+          [
+            0.26335305139571286,
+            0.40651860821996993
+          ],
+          [
+            -0.15131338006302303,
+            -0.3020583814918924
+          ],
+          [
+            -0.2331433119323069,
+            0.32977776134351977
+          ],
+          [
+            0.1930266730190859,
+            0.5671824960760625
+          ],
+          [
+            0.12419341081197662,
+            -0.24500417144516545
+          ],
+          [
+            0.7577711226679167,
+            -0.40010396010949834
+          ],
+          [
+            -0.151072767872436,
+            -0.47440971773249085
+          ],
+          [
+            0.061067459630363634,
+            -0.2455079654378375
+          ],
+          [
+            0.07528090618044318,
+            0.0209085510373922
+          ],
+          [
+            -0.04802762778647419,
+            0.6889283296387241
+          ],
+          [
+            0.18857082074512446,
+            -0.19543139330150583
+          ],
+          [
+            -0.7291443971038913,
+            0.12864718721905385
+          ],
+          [
+            0.2881787710412455,
+            -0.5848918277495206
+          ],
+          [
+            -0.2721911780846273,
+            -0.559644465315076
+          ],
+          [
+            -0.4177916818325425,
+            0.01998630445945443
+          ]
+        ],
+        "wall_seconds": 0.2595279160013888,
+        "log_density_evaluations": 40016,
+        "completed_draws": 32000,
+        "mean_acceptance": 0.71759375,
+        "autocorrelation_time": [
+          31.964127035846616,
+          32.9208733742508
+        ],
+        "ess_estimate": [
+          1001.1222882487344,
+          972.02767484987
+        ],
+        "mcse_mean_estimate": [
+          0.03187273899487521,
+          0.032375213149664704
+        ],
+        "steps_per_autocorrelation_time": [
+          62.5701430155459,
+          60.751729678116874
+        ],
+        "diagnostic_note": "Ensemble walkers are coupled; independent-chain R-hat is not applied. ESS/MCSE use emcee's ensemble autocorrelation estimate.",
+        "mean": [
+          0.02423847861582441,
+          0.03229390354884918
+        ],
+        "covariance": [
+          [
+            1.0170115916720468,
+            0.968180246195794
+          ],
+          [
+            0.968180246195794,
+            1.018835110061005
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            -1.59597689348316,
+            -1.6205516986899835
+          ],
+          [
+            0.011369940386289357,
+            0.03164245019421008
+          ],
+          [
+            1.688562958307065,
+            1.7002240741882553
+          ]
+        ],
+        "mean_error": [
+          0.02423847861582441,
+          0.03229390354884918
+        ],
+        "maximum_scaled_covariance_error": 0.01883511006100491,
+        "maximum_scaled_quantile_error": 0.055370447236783304,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "autocorrelation_length": true
+        }
+      },
+      "hmc": {
+        "status": "complete",
+        "wall_seconds": 5.64732608399936,
+        "engine_elapsed_seconds": 5.645531000856863,
+        "gradient_evaluations": 52016,
+        "completed_draws": 4000,
+        "initial_positions": [
+          [
+            0.05398517302951829,
+            -0.3454419708495836
+          ],
+          [
+            0.7131624664516666,
+            -0.8471731342359208
+          ],
+          [
+            -0.003167229737734499,
+            -0.8402074133778733
+          ],
+          [
+            -0.9726499273943369,
+            0.3346599210361491
+          ]
+        ],
+        "settings": {
+          "algorithm": "hmc",
+          "chains": 4,
+          "warmup": 300,
+          "draws": 1000,
+          "seed": 307,
+          "step_size": 0.15,
+          "steps": 8,
+          "max_depth": 7,
+          "target_accept": 0.85,
+          "iterations": 1000,
+          "batch_size": 8,
+          "learning_rate": 0.03,
+          "initialization": "dispersed",
+          "max_seconds": 120,
+          "max_gradient_evaluations": 500000
+        },
+        "diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            2
+          ],
+          "parameters": [
+            {
+              "mean": -0.05868475308188643,
+              "sd": 0.9960083056037509,
+              "q05": -1.7237784847888626,
+              "q50": -0.04814367753052763,
+              "q95": 1.5982448757556384,
+              "rhat": 1.0042205720571002,
+              "rank_rhat": 1.0042205720571002,
+              "folded_rhat": 0.9992919663096875,
+              "ess_bulk": 1031.8488434517317,
+              "ess_tail": 1736.5261959289755,
+              "ess_mean": 1033.9897369057803,
+              "mcse_mean": 0.03097453860901034,
+              "name": "position[0]",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            },
+            {
+              "mean": 0.039054428899779864,
+              "sd": 0.990593312094545,
+              "q05": -1.5912900113660553,
+              "q50": 0.04485787341157901,
+              "q95": 1.6846995279935784,
+              "rhat": 1.004614040644203,
+              "rank_rhat": 1.004614040644203,
+              "folded_rhat": 0.9998579677149959,
+              "ess_bulk": 1029.0555859522865,
+              "ess_tail": 1832.3303423662016,
+              "ess_mean": 1029.4985407777385,
+              "mcse_mean": 0.030873262381847375,
+              "name": "position[1]",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          },
+          "as_of_retained": 4000
+        },
+        "transition_counts": {
+          "divergences": 0,
+          "warmup_divergences": 103,
+          "max_depth_events": 0,
+          "warmup_max_depth_events": 0,
+          "acceptance_sum": 4933.200932855955,
+          "transitions": 5200,
+          "retained_transitions": 4000,
+          "elapsed_seconds": 5.645531000856863,
+          "gradient_evaluations": 52016,
+          "mean_acceptance": 0.9486924870876837
+        },
+        "frozen_step_sizes": [
+          0.18126756518572038,
+          0.162216032094221,
+          0.18197678354491106,
+          0.16088303382531566
+        ],
+        "frozen_scales": [
+          [
+            0.9395758240513244,
+            0.9160708064302511
+          ],
+          [
+            1.0248618332189678,
+            1.0010363397823208
+          ],
+          [
+            1.0112336850266537,
+            0.9893884028509744
+          ],
+          [
+            0.9465743742729306,
+            0.9166530525614752
+          ]
+        ],
+        "mean": [
+          -0.058684753081886254,
+          0.03905442889978001
+        ],
+        "covariance": [
+          [
+            0.9920325448316551,
+            0.9385183411564428
+          ],
+          [
+            0.9385183411564428,
+            0.9812751099664405
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            -1.7237784847888626,
+            -1.5912900113660553
+          ],
+          [
+            -0.04814367753052763,
+            0.04485787341157901
+          ],
+          [
+            1.5982448757556384,
+            1.6846995279935784
+          ]
+        ],
+        "mean_error": [
+          -0.058684753081886254,
+          0.03905442889978001
+        ],
+        "maximum_scaled_covariance_error": 0.018724890033559483,
+        "maximum_scaled_quantile_error": 0.07892485783738978,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "rhat": true,
+          "bulk_ess": true,
+          "tail_ess": true,
+          "divergences": true,
+          "reference_mean_agreement": true,
+          "principal_rhat": false,
+          "principal_bulk_ess": false,
+          "principal_tail_ess": false
+        },
+        "independent_reference_mean_difference": [
+          -0.08292323169771067,
+          0.006760525350930829
+        ],
+        "combined_mcse_mean": [
+          0.044444274469007936,
+          0.04473603420716475
+        ],
+        "principal_diagnostics": {
+          "status": "unreliable",
+          "message": "chains disagree",
+          "shape": [
+            4,
+            1000,
+            2
+          ],
+          "parameters": [
+            {
+              "mean": -0.01388073534605781,
+              "sd": 1.3875057364045347,
+              "q05": -2.3149878373001807,
+              "q50": 0.01284580619001044,
+              "q95": 2.299461717078906,
+              "rhat": 1.0014934294711229,
+              "rank_rhat": 1.0014934294711229,
+              "folded_rhat": 0.9993341326567122,
+              "ess_bulk": 1087.8849476941862,
+              "ess_tail": 1879.0778069442604,
+              "ess_mean": 1086.8982274771113,
+              "mcse_mean": 0.04208626128165177,
+              "name": "wide: (x+y)/sqrt(2)",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            },
+            {
+              "mean": -0.06911203836686224,
+              "sd": 0.21939800874804075,
+              "q05": -0.4403073607675199,
+              "q50": -0.06947980996502723,
+              "q95": 0.28886255536103944,
+              "rhat": 1.1475937766727806,
+              "rank_rhat": 1.1475937766727806,
+              "folded_rhat": 1.0377725834494878,
+              "ess_bulk": 20.2453896339618,
+              "ess_tail": 98.93991903587535,
+              "ess_mean": 20.680586447537802,
+              "mcse_mean": 0.048244882895619595,
+              "name": "narrow: (x-y)/sqrt(2)",
+              "status": "unreliable",
+              "message": "chains disagree"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          }
+        }
+      },
+      "nuts": {
+        "status": "complete",
+        "wall_seconds": 7.624469999998837,
+        "engine_elapsed_seconds": 7.622689823012479,
+        "gradient_evaluations": 67654,
+        "completed_draws": 4000,
+        "initial_positions": [
+          [
+            0.05398517302951829,
+            -0.3454419708495836
+          ],
+          [
+            0.7131624664516666,
+            -0.8471731342359208
+          ],
+          [
+            -0.003167229737734499,
+            -0.8402074133778733
+          ],
+          [
+            -0.9726499273943369,
+            0.3346599210361491
+          ]
+        ],
+        "settings": {
+          "algorithm": "nuts",
+          "chains": 4,
+          "warmup": 300,
+          "draws": 1000,
+          "seed": 307,
+          "step_size": 0.15,
+          "steps": 8,
+          "max_depth": 7,
+          "target_accept": 0.85,
+          "iterations": 1000,
+          "batch_size": 8,
+          "learning_rate": 0.03,
+          "initialization": "dispersed",
+          "max_seconds": 120,
+          "max_gradient_evaluations": 500000
+        },
+        "diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            2
+          ],
+          "parameters": [
+            {
+              "mean": -0.06265611022776663,
+              "sd": 0.9815170547809551,
+              "q05": -1.6251389135525465,
+              "q50": -0.07251281418812855,
+              "q95": 1.535526714832406,
+              "rhat": 1.0045702089588007,
+              "rank_rhat": 1.0045702089588007,
+              "folded_rhat": 1.0039312187009817,
+              "ess_bulk": 768.4479262928937,
+              "ess_tail": 904.3552565689624,
+              "ess_mean": 763.2953433275909,
+              "mcse_mean": 0.03552642801953065,
+              "name": "position[0]",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            },
+            {
+              "mean": -0.05722208662044312,
+              "sd": 0.9836036509463326,
+              "q05": -1.6046102268044335,
+              "q50": -0.06571980279166943,
+              "q95": 1.54125913126802,
+              "rhat": 1.0035690738522256,
+              "rank_rhat": 1.0035690738522256,
+              "folded_rhat": 1.002461586027663,
+              "ess_bulk": 774.4707906384476,
+              "ess_tail": 837.7705452963613,
+              "ess_mean": 772.6184353889154,
+              "mcse_mean": 0.03538649911401391,
+              "name": "position[1]",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          },
+          "as_of_retained": 4000
+        },
+        "transition_counts": {
+          "divergences": 0,
+          "warmup_divergences": 17,
+          "max_depth_events": 0,
+          "warmup_max_depth_events": 0,
+          "acceptance_sum": 4823.359451404421,
+          "transitions": 5200,
+          "retained_transitions": 4000,
+          "elapsed_seconds": 7.622689823012479,
+          "gradient_evaluations": 67654,
+          "mean_acceptance": 0.927569125270081
+        },
+        "frozen_step_sizes": [
+          0.1508766430727063,
+          0.17569316059083792,
+          0.22292525616976702,
+          0.19101407955400299
+        ],
+        "frozen_scales": [
+          [
+            1.1416010549918232,
+            1.1359205285951806
+          ],
+          [
+            0.9805162930205814,
+            1.040988567761012
+          ],
+          [
+            0.83515411804161,
+            0.7981483242381467
+          ],
+          [
+            0.9528724251250316,
+            0.961233351445958
+          ]
+        ],
+        "mean": [
+          -0.06265611022776672,
+          -0.05722208662044311
+        ],
+        "covariance": [
+          [
+            0.9633757288258809,
+            0.9167926926653573
+          ],
+          [
+            0.9167926926653573,
+            0.9674761421549545
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            -1.6251389135525465,
+            -1.6046102268044335
+          ],
+          [
+            -0.07251281418812855,
+            -0.06571980279166943
+          ],
+          [
+            1.535526714832406,
+            1.54125913126802
+          ]
+        ],
+        "mean_error": [
+          -0.06265611022776672,
+          -0.05722208662044311
+        ],
+        "maximum_scaled_covariance_error": 0.03662427117411915,
+        "maximum_scaled_quantile_error": 0.10932691211906587,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "rhat": true,
+          "bulk_ess": true,
+          "tail_ess": true,
+          "divergences": true,
+          "reference_mean_agreement": true,
+          "principal_rhat": true,
+          "principal_bulk_ess": true,
+          "principal_tail_ess": true
+        },
+        "independent_reference_mean_difference": [
+          -0.08689458884359114,
+          -0.08951599016929229
+        ],
+        "combined_mcse_mean": [
+          0.047728383367366754,
+          0.04796205527322958
+        ],
+        "principal_diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            2
+          ],
+          "parameters": [
+            {
+              "mean": -0.08476668590778494,
+              "sd": 1.3719397319692197,
+              "q05": -2.264506297850565,
+              "q50": -0.09181609370885804,
+              "q95": 2.15392528113722,
+              "rhat": 1.0042489991495875,
+              "rank_rhat": 1.0042489991495875,
+              "folded_rhat": 1.0035027844225834,
+              "ess_bulk": 754.4328430361493,
+              "ess_tail": 853.2294235721272,
+              "ess_mean": 752.7923393441392,
+              "mcse_mean": 0.050003158537525856,
+              "name": "wide: (x+y)/sqrt(2)",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            },
+            {
+              "mean": -0.003842434941866234,
+              "sd": 0.22052946022030895,
+              "q05": -0.37228218336949825,
+              "q50": -0.0034507020405085,
+              "q95": 0.35866040881416456,
+              "rhat": 1.001592599482889,
+              "rank_rhat": 0.9998920651677478,
+              "folded_rhat": 1.001592599482889,
+              "ess_bulk": 3281.632356684324,
+              "ess_tail": 2405.9048800133974,
+              "ess_mean": 3271.6377932334817,
+              "mcse_mean": 0.0038555292855639678,
+              "name": "narrow: (x-y)/sqrt(2)",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          }
+        }
+      },
+      "hmc_steps7_investigation": {
+        "status": "complete",
+        "wall_seconds": 5.126014166999084,
+        "engine_elapsed_seconds": 5.124226080166409,
+        "gradient_evaluations": 46816,
+        "completed_draws": 4000,
+        "initial_positions": [
+          [
+            0.05398517302951829,
+            -0.3454419708495836
+          ],
+          [
+            0.7131624664516666,
+            -0.8471731342359208
+          ],
+          [
+            -0.003167229737734499,
+            -0.8402074133778733
+          ],
+          [
+            -0.9726499273943369,
+            0.3346599210361491
+          ]
+        ],
+        "settings": {
+          "algorithm": "hmc",
+          "chains": 4,
+          "warmup": 300,
+          "draws": 1000,
+          "seed": 307,
+          "step_size": 0.15,
+          "steps": 7,
+          "max_depth": 7,
+          "target_accept": 0.85,
+          "iterations": 1000,
+          "batch_size": 8,
+          "learning_rate": 0.03,
+          "initialization": "dispersed",
+          "max_seconds": 120,
+          "max_gradient_evaluations": 500000
+        },
+        "diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            2
+          ],
+          "parameters": [
+            {
+              "mean": -0.01060426658407754,
+              "sd": 0.9916201414051059,
+              "q05": -1.6204022004890326,
+              "q50": -0.009088287623949351,
+              "q95": 1.6662580033303904,
+              "rhat": 1.0025800065303954,
+              "rank_rhat": 1.0025800065303954,
+              "folded_rhat": 0.9997516535169312,
+              "ess_bulk": 784.0416455788185,
+              "ess_tail": 1489.7038610118364,
+              "ess_mean": 784.9960492728247,
+              "mcse_mean": 0.035392529595087194,
+              "name": "position[0]",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            },
+            {
+              "mean": -0.008031439403752682,
+              "sd": 0.9953087848050334,
+              "q05": -1.6121056627160284,
+              "q50": -0.018762380035545635,
+              "q95": 1.638790980094118,
+              "rhat": 1.0028266273888895,
+              "rank_rhat": 1.0028266273888895,
+              "folded_rhat": 1.0001584470402882,
+              "ess_bulk": 753.09858845722,
+              "ess_tail": 1273.5904072595886,
+              "ess_mean": 753.8996189745823,
+              "mcse_mean": 0.036249421102819736,
+              "name": "position[1]",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          },
+          "as_of_retained": 4000
+        },
+        "transition_counts": {
+          "divergences": 0,
+          "warmup_divergences": 95,
+          "max_depth_events": 0,
+          "warmup_max_depth_events": 0,
+          "acceptance_sum": 4851.302996525274,
+          "transitions": 5200,
+          "retained_transitions": 4000,
+          "elapsed_seconds": 5.124226080166409,
+          "gradient_evaluations": 46816,
+          "mean_acceptance": 0.932942883947168
+        },
+        "frozen_step_sizes": [
+          0.17583307214926983,
+          0.1386508344129076,
+          0.19554502466465445,
+          0.1517231712018971
+        ],
+        "frozen_scales": [
+          [
+            0.8774690902488677,
+            0.9526043835270367
+          ],
+          [
+            1.0405560995250187,
+            1.0757475123360096
+          ],
+          [
+            0.8978075664404866,
+            0.8866131939615169
+          ],
+          [
+            1.0650748928442102,
+            1.0861006561445479
+          ]
+        ],
+        "mean": [
+          -0.010604266584077444,
+          -0.008031439403752717
+        ],
+        "covariance": [
+          [
+            0.9833105048402824,
+            0.9381370985467035
+          ],
+          [
+            0.9381370985467035,
+            0.9906395771100726
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            -1.6204022004890326,
+            -1.6121056627160284
+          ],
+          [
+            -0.009088287623949351,
+            -0.018762380035545635
+          ],
+          [
+            1.6662580033303904,
+            1.638790980094118
+          ]
+        ],
+        "mean_error": [
+          -0.010604266584077444,
+          -0.008031439403752717
+        ],
+        "maximum_scaled_covariance_error": 0.016689495159717627,
+        "maximum_scaled_quantile_error": 0.03274796423544446,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "rhat": true,
+          "bulk_ess": true,
+          "tail_ess": true,
+          "divergences": true,
+          "principal_rhat": true,
+          "principal_bulk_ess": true,
+          "principal_tail_ess": true
+        },
+        "principal_diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            2
+          ],
+          "parameters": [
+            {
+              "mean": -0.013177434076193506,
+              "sd": 1.387484104241155,
+              "q05": -2.265338146220922,
+              "q50": -0.005817599142405932,
+              "q95": 2.30077794042864,
+              "rhat": 1.0026914862141294,
+              "rank_rhat": 1.0026914862141294,
+              "folded_rhat": 0.9998521051915666,
+              "ess_bulk": 759.4511967408117,
+              "ess_tail": 1323.5884636985425,
+              "ess_mean": 760.8572603740162,
+              "mcse_mean": 0.050300977145368686,
+              "name": "wide: (x+y)/sqrt(2)",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            },
+            {
+              "mean": -0.001819263546028771,
+              "sd": 0.2209930823090936,
+              "q05": -0.3686226088339139,
+              "q50": -0.00419541357528346,
+              "q95": 0.3526029353393142,
+              "rhat": 1.0011374444999561,
+              "rank_rhat": 1.0011374444999561,
+              "folded_rhat": 0.9999022457699542,
+              "ess_bulk": 1339.6190672697023,
+              "ess_tail": 2263.673069761578,
+              "ess_mean": 1336.3494833332363,
+              "mcse_mean": 0.006045311087256349,
+              "name": "narrow: (x-y)/sqrt(2)",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          }
+        },
+        "reason": "The original fixed 8-step HMC run has poor narrow principal-direction diagnostics hidden by individual coordinate diagnostics. This same-seed 7-step follow-up tests sensitivity to fixed integration duration; it does not replace the failed run."
+      }
+    },
+    "beta": {
+      "oracle": "Normalized Beta(9,5) posterior in logit coordinates",
+      "mean": [
+        0.6428571428571429
+      ],
+      "covariance": [
+        [
+          0.015306122448979591
+        ]
+      ],
+      "quantiles_05_50_95": [
+        [
+          0.4273806605917876
+        ],
+        [
+          0.649836606238505
+        ],
+        [
+          0.8343405732849283
+        ]
+      ],
+      "emcee": {
+        "reference": "emcee",
+        "version": "3.1.6",
+        "settings": {
+          "walkers": 16,
+          "warmup_steps": 500,
+          "retained_steps": 2000,
+          "move": "emcee.moves.StretchMove(a=2.0)",
+          "threads": 1
+        },
+        "initialization_seed": 10811,
+        "sampler_randomstate_seed": 10812,
+        "initial_positions": [
+          [
+            0.6068053206625241
+          ],
+          [
+            0.48644620431746904
+          ],
+          [
+            -0.08314561246759697
+          ],
+          [
+            -0.09745957194511201
+          ],
+          [
+            -0.7508703044080844
+          ],
+          [
+            -0.29304574583986204
+          ],
+          [
+            0.26717685049322476
+          ],
+          [
+            0.28667877000654385
+          ],
+          [
+            -0.5587942481049094
+          ],
+          [
+            0.5584449878300992
+          ],
+          [
+            -0.34892922953576033
+          ],
+          [
+            -0.5030031373518707
+          ],
+          [
+            -0.1348619887513471
+          ],
+          [
+            0.2163010095798455
+          ],
+          [
+            -0.20723719314882164
+          ],
+          [
+            0.3558522636846369
+          ]
+        ],
+        "wall_seconds": 0.2859470830007922,
+        "log_density_evaluations": 40016,
+        "completed_draws": 32000,
+        "mean_acceptance": 0.80190625,
+        "autocorrelation_time": [
+          22.053635490234488
+        ],
+        "ess_estimate": [
+          1451.0079308316235
+        ],
+        "mcse_mean_estimate": [
+          0.0032796550286846864
+        ],
+        "steps_per_autocorrelation_time": [
+          90.68799567697647
+        ],
+        "diagnostic_note": "Ensemble walkers are coupled; independent-chain R-hat is not applied. ESS/MCSE use emcee's ensemble autocorrelation estimate.",
+        "mean": [
+          0.6427678853032099
+        ],
+        "covariance": [
+          [
+            0.01560724024762578
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            0.42724228775275636
+          ],
+          [
+            0.6497340454198648
+          ],
+          [
+            0.8371864206684967
+          ]
+        ],
+        "mean_error": [
+          -8.92575539329643e-05
+        ],
+        "maximum_scaled_covariance_error": 0.019673029511551025,
+        "maximum_scaled_quantile_error": 0.023002710541661406,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "autocorrelation_length": true
+        }
+      },
+      "hmc": {
+        "status": "complete",
+        "wall_seconds": 12.233375416999479,
+        "engine_elapsed_seconds": 12.231648760902317,
+        "gradient_evaluations": 52022,
+        "completed_draws": 4000,
+        "initial_positions": [
+          [
+            0.0720606382256424
+          ],
+          [
+            -0.7577318825612859
+          ],
+          [
+            0.14824441584952358
+          ],
+          [
+            0.20914119836802084
+          ]
+        ],
+        "settings": {
+          "algorithm": "hmc",
+          "chains": 4,
+          "warmup": 300,
+          "draws": 1000,
+          "seed": 811,
+          "step_size": 0.15,
+          "steps": 8,
+          "max_depth": 7,
+          "target_accept": 0.85,
+          "iterations": 1000,
+          "batch_size": 8,
+          "learning_rate": 0.03,
+          "initialization": "dispersed",
+          "max_seconds": 120,
+          "max_gradient_evaluations": 500000
+        },
+        "diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            1
+          ],
+          "parameters": [
+            {
+              "mean": 0.6489585480521145,
+              "sd": 0.1219000717457227,
+              "q05": 0.43681601834423867,
+              "q50": 0.657230671807807,
+              "q95": 0.8297395421244534,
+              "rhat": 1.0037199235899872,
+              "rank_rhat": 1.0017782409621352,
+              "folded_rhat": 1.0037199235899872,
+              "ess_bulk": 661.3882651203432,
+              "ess_tail": 1150.5382570611787,
+              "ess_mean": 675.1169172490456,
+              "mcse_mean": 0.0046915296550413136,
+              "name": "probability",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          },
+          "as_of_retained": 4000
+        },
+        "transition_counts": {
+          "divergences": 0,
+          "warmup_divergences": 0,
+          "max_depth_events": 0,
+          "warmup_max_depth_events": 0,
+          "acceptance_sum": 4879.428661646101,
+          "transitions": 5200,
+          "retained_transitions": 4000,
+          "elapsed_seconds": 12.231648760902317,
+          "gradient_evaluations": 52022,
+          "mean_acceptance": 0.9383516657011733
+        },
+        "frozen_step_sizes": [
+          0.6899621216906117,
+          0.7932384456888012,
+          0.9220925099496142,
+          0.6251457833603717
+        ],
+        "frozen_scales": [
+          [
+            0.5923677581536646
+          ],
+          [
+            0.49562304750017344
+          ],
+          [
+            0.5349494796456106
+          ],
+          [
+            0.6080209773442747
+          ]
+        ],
+        "mean": [
+          0.6489585480521145
+        ],
+        "covariance": [
+          [
+            0.014859627491612343
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            0.43681601834423867
+          ],
+          [
+            0.657230671807807
+          ],
+          [
+            0.8297395421244534
+          ]
+        ],
+        "mean_error": [
+          0.006101405194971599
+        ],
+        "maximum_scaled_covariance_error": 0.029171003881326894,
+        "maximum_scaled_quantile_error": 0.07626508873589274,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "rhat": true,
+          "bulk_ess": true,
+          "tail_ess": true,
+          "divergences": true,
+          "reference_mean_agreement": true
+        },
+        "independent_reference_mean_difference": [
+          0.006190662748904563
+        ],
+        "combined_mcse_mean": [
+          0.005724210653994908
+        ]
+      },
+      "nuts": {
+        "status": "complete",
+        "wall_seconds": 6.80215083299845,
+        "engine_elapsed_seconds": 6.800434852189937,
+        "gradient_evaluations": 27092,
+        "completed_draws": 4000,
+        "initial_positions": [
+          [
+            0.0720606382256424
+          ],
+          [
+            -0.7577318825612859
+          ],
+          [
+            0.14824441584952358
+          ],
+          [
+            0.20914119836802084
+          ]
+        ],
+        "settings": {
+          "algorithm": "nuts",
+          "chains": 4,
+          "warmup": 300,
+          "draws": 1000,
+          "seed": 811,
+          "step_size": 0.15,
+          "steps": 8,
+          "max_depth": 7,
+          "target_accept": 0.85,
+          "iterations": 1000,
+          "batch_size": 8,
+          "learning_rate": 0.03,
+          "initialization": "dispersed",
+          "max_seconds": 120,
+          "max_gradient_evaluations": 500000
+        },
+        "diagnostics": {
+          "status": "assessed",
+          "message": "no disagreement detected; unseen modes remain possible",
+          "shape": [
+            4,
+            1000,
+            1
+          ],
+          "parameters": [
+            {
+              "mean": 0.6439373393510661,
+              "sd": 0.12246955771872459,
+              "q05": 0.4334744116005307,
+              "q50": 0.6510219864692068,
+              "q95": 0.8329391172356165,
+              "rhat": 1.0059665558558843,
+              "rank_rhat": 1.0059665558558843,
+              "folded_rhat": 1.0012554303651677,
+              "ess_bulk": 1373.4133639666877,
+              "ess_tail": 1148.935139663673,
+              "ess_mean": 1438.0984417940044,
+              "mcse_mean": 0.0032294892377259053,
+              "name": "probability",
+              "status": "assessed",
+              "message": "no disagreement detected; unseen modes remain possible"
+            }
+          ],
+          "definitions": {
+            "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+            "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+            "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+            "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+            "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+            "rhat": "Maximum of rank_rhat and folded_rhat",
+            "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+            "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+            "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+            "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+            "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+            "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+            "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+          },
+          "as_of_retained": 4000
+        },
+        "transition_counts": {
+          "divergences": 0,
+          "warmup_divergences": 0,
+          "max_depth_events": 0,
+          "warmup_max_depth_events": 0,
+          "acceptance_sum": 4808.0915450821685,
+          "transitions": 5200,
+          "retained_transitions": 4000,
+          "elapsed_seconds": 6.800434852189937,
+          "gradient_evaluations": 27092,
+          "mean_acceptance": 0.9246329894388786
+        },
+        "frozen_step_sizes": [
+          0.6337557976738616,
+          1.0658509568839527,
+          1.0396140410904968,
+          0.7339485447107619
+        ],
+        "frozen_scales": [
+          [
+            0.5300818310686651
+          ],
+          [
+            0.49552070389971903
+          ],
+          [
+            0.5125117931155443
+          ],
+          [
+            0.5513121591062357
+          ]
+        ],
+        "mean": [
+          0.6439373393510661
+        ],
+        "covariance": [
+          [
+            0.014998792567820014
+          ]
+        ],
+        "quantiles_05_50_95": [
+          [
+            0.4334744116005307
+          ],
+          [
+            0.6510219864692068
+          ],
+          [
+            0.8329391172356165
+          ]
+        ],
+        "mean_error": [
+          0.0010801964939232134
+        ],
+        "maximum_scaled_covariance_error": 0.02007888556909242,
+        "maximum_scaled_quantile_error": 0.049255202993813335,
+        "checks": {
+          "mean": true,
+          "covariance": true,
+          "quantiles": true,
+          "rhat": true,
+          "bulk_ess": true,
+          "tail_ess": true,
+          "divergences": true,
+          "reference_mean_agreement": true
+        },
+        "independent_reference_mean_difference": [
+          0.0011694540478561777
+        ],
+        "combined_mcse_mean": [
+          0.004602796741521854
+        ]
+      }
+    }
+  },
+  "audit_note": "Principal-direction diagnostics were added during audit after discovering disagreement hidden by individual-coordinate diagnostics. Numeric thresholds were not loosened; original samples were retained. The seven-step HMC investigation uses the original seed and is an additional run, not a replacement.",
+  "raw_draws": {
+    "file": "reference-inference-draws.npz",
+    "sha256": "0bc91ea2071ffbcb82cb25e25214e5bfd908c8a107008ef7a39d1b60bd0e3615",
+    "arrays": {
+      "gaussian_emcee_step_walker_parameter": [
+        2000,
+        16,
+        2
+      ],
+      "gaussian_hmc_chain_draw_parameter": [
+        4,
+        1000,
+        2
+      ],
+      "gaussian_nuts_chain_draw_parameter": [
+        4,
+        1000,
+        2
+      ],
+      "beta_emcee_step_walker_parameter": [
+        2000,
+        16,
+        1
+      ],
+      "beta_hmc_chain_draw_parameter": [
+        4,
+        1000,
+        1
+      ],
+      "beta_nuts_chain_draw_parameter": [
+        4,
+        1000,
+        1
+      ],
+      "gaussian_hmc_steps7_chain_draw_parameter": [
+        4,
+        1000,
+        2
+      ]
+    },
+    "loading": "numpy.load(path, allow_pickle=False); no thinning"
+  },
+  "limitations": [
+    "Different algorithms and random generators are compared distributionally; trajectories are not expected to match.",
+    "emcee ensemble walkers are coupled and are not independent diagnostic chains.",
+    "The reference evaluates hand-coded analytic log densities while Posterior evaluates its compiled graph and gradients; wall times are not a pure sampler-speed comparison.",
+    "The original Gaussian fixed 8-step HMC run fails principal-direction diagnostics even though its individual-coordinate diagnostics look reassuring; its samples and failed checks are retained.",
+    "This is a bounded common-model cross-check, not validation of every supported target.",
+    "Timings are observed on the recorded host and are not portable runtime guarantees."
+  ],
+  "reference_documentation": "https://emcee.readthedocs.io/en/stable/tutorials/quickstart/"
+}

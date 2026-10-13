@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "Correlation defeats factorization",
+  "parameters": [
+    {
+      "name": "position",
+      "shape": [
+        2
+      ],
+      "constraint": {
+        "type": "real"
+      }
+    }
+  ],
+  "data": {},
+  "nodes": [],
+  "factors": [
+    {
+      "name": "normalized_target",
+      "distribution": "multivariate_normal",
+      "value": "position",
+      "params": {
+        "loc": [
+          0,
+          0
+        ],
+        "cov": [
+          [
+            1,
+            0.95
+          ],
+          [
+            0.95,
+            1.0
+          ]
+        ]
+      }
+    }
+  ],
+  "derived": [],
+  "metadata": {
+    "preset": "gaussian",
+    "config": {
+      "correlation": 0.95,
+      "scale": 1.0
+    }
+  },
+  "density_kind": "normalized target density"
+}

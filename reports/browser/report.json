@@ -1,0 +1,830 @@
+{
+  "schema": 1,
+  "timestamp": "2026-10-12T11:08:44.253Z",
+  "url": "http://127.0.0.1:4178/Posterior/",
+  "environment": {
+    "node": "v26.4.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "chromium": "151.0.7922.34"
+  },
+  "checks": [
+    {
+      "name": "Cold self-hosted Pyodide and package loading under /Posterior/",
+      "status": "passed",
+      "seconds": 2.9473195829999996,
+      "details": {
+        "runtime": "Pyodide 0.27.7; NumPy 2.0.2; SciPy 1.14.1",
+        "network": "All browser asset requests use the local site origin."
+      }
+    },
+    {
+      "name": "Native / Pyodide log-density and gradient parity on all five presets",
+      "status": "passed",
+      "seconds": 0.8911855000000005,
+      "details": {
+        "fixtures": 10,
+        "absolute_tolerance": 1e-9,
+        "relative_tolerance": 1e-10,
+        "maximum_absolute_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "name": "Actual UI NUTS run, unavailable diagnostics, and retained samples",
+      "status": "passed",
+      "seconds": 0.22321833400000013,
+      "details": {
+        "retained": 10,
+        "status": "unreliable"
+      }
+    },
+    {
+      "name": "Measured default browser pilot: four chains, 200 warmup + 200 retained each",
+      "status": "passed",
+      "seconds": 15.616709583000002,
+      "details": {
+        "status": "complete",
+        "completed": 1600,
+        "retained": 800,
+        "wall_seconds_including_ui": 15.596927625000001,
+        "engine_active_seconds": 14.777400000000004,
+        "gradient_evaluations": 7707,
+        "interpretation": "Measured runtime of a single seed; not a general throughput or convergence guarantee."
+      }
+    },
+    {
+      "name": "Pause / resume is deterministic in the same pinned browser runtime",
+      "status": "passed",
+      "seconds": 0.4168015419999974,
+      "details": {
+        "paused_after": 13,
+        "completed": 40,
+        "exact_draws_and_rng_match": true
+      }
+    },
+    {
+      "name": "All five presets execute short NUTS and VI runs in Pyodide",
+      "status": "passed",
+      "seconds": 2.80203875,
+      "details": {
+        "runs": 10,
+        "interpretation": "Execution checks only; 16 draws per chain do not establish inference quality."
+      }
+    },
+    {
+      "name": "UI pause and hard worker recovery preserve the last completed checkpoint",
+      "status": "passed",
+      "seconds": 3.0954625000000013,
+      "details": {
+        "restored_completed": 19,
+        "incomplete_transition_discarded": true
+      }
+    },
+    {
+      "name": "Cancel, reset, model changes and stale-generation response rejection",
+      "status": "passed",
+      "seconds": 0.36405570799999987,
+      "details": {
+        "cancelled_completed": 33,
+        "stale_response_ignored": true
+      }
+    },
+    {
+      "name": "CSV parsing, explicit columns, finite validation and local regression import",
+      "status": "passed",
+      "seconds": 0.20035270800000216,
+      "details": {
+        "imported_rows": 3,
+        "invalid_fixtures_rejected": 3
+      }
+    },
+    {
+      "name": "Actual VI UI, independent-fit summaries and objective plot",
+      "status": "passed",
+      "seconds": 0.9736970419999997,
+      "details": {
+        "fits": 2,
+        "iterations": 75
+      }
+    },
+    {
+      "name": "JSON and CSV exports, validated import, local save / load / delete",
+      "status": "passed",
+      "seconds": 0.391700417,
+      "details": {
+        "retained": 60,
+        "round_trip": "checkpoint schema validated in Python"
+      }
+    },
+    {
+      "name": "Recorded transitions, branch-aware replay, PNG export and method comparison",
+      "status": "passed",
+      "seconds": 1.748972708000001,
+      "details": {
+        "recorded_transitions": 8,
+        "coordinates": "scaled working x; selected endpoint from recorded metadata"
+      }
+    },
+    {
+      "name": "Centered/noncentered and mixture initialization comparisons use compatible targets",
+      "status": "passed",
+      "seconds": 1.5312173750000038,
+      "details": {
+        "funnel": "common model coordinates; separate coverage, divergences and integration costs",
+        "mixture": "separate initializations and chain occupancy"
+      }
+    },
+    {
+      "name": "Native checkpoint import derives model identity and references from Python",
+      "status": "passed",
+      "seconds": 0.8173491670000003,
+      "details": {
+        "envelope": "native snapshot",
+        "retained": 3,
+        "external_reference_ignored": true
+      }
+    },
+    {
+      "name": "Cancellation during an expensive transition and forced recovery are transactional",
+      "status": "passed",
+      "seconds": 3.546255207999995,
+      "details": {
+        "dimension": 32,
+        "deterministic_nodes": 90,
+        "integration_steps_per_transition": 200,
+        "completed_when_cancel_requested": 0,
+        "completed_after_cancel": 1,
+        "recovered_completed": 0,
+        "partial_draws": 0
+      }
+    },
+    {
+      "name": "Narrow-screen layout, keyboard navigation, reduced motion and guide",
+      "status": "passed",
+      "seconds": 0.35186316700000314,
+      "details": {
+        "viewport": "390 × 844",
+        "horizontal_overflow": false,
+        "keyboard": "Enter opens guide; Escape closes native dialog"
+      }
+    },
+    {
+      "name": "Runtime asset failure is explicit and retry recovers",
+      "status": "passed",
+      "seconds": 3.542544750000001,
+      "details": {
+        "failed_asset": "runtime/pyodide.mjs",
+        "retry": "new worker loaded successfully"
+      }
+    },
+    {
+      "name": "No uncaught browser exceptions or failed static assets",
+      "status": "passed",
+      "seconds": 0.00004800000000250293,
+      "details": {
+        "page_errors": 0,
+        "console_errors": 0,
+        "failed_requests": 0
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "cold_load",
+      "wall_seconds": 2.877783084
+    },
+    {
+      "kind": "ui_run",
+      "preset": "beta",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 5,
+        "draws": 5,
+        "seed": 42,
+        "step_size": 0.2,
+        "steps": 15,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 100000
+      },
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 14.585801275085894,
+        "transitions": 20,
+        "retained_transitions": 10,
+        "elapsed_seconds": 0.09489999999999998,
+        "gradient_evaluations": 105,
+        "mean_acceptance": 0.7292900637542947
+      },
+      "progress": {
+        "completed": 20,
+        "total": 20,
+        "warmup_completed": 10,
+        "retained": 10,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.12.7",
+        "numpy": "2.0.2",
+        "scipy": "1.14.1",
+        "platform": "Emscripten-3.1.58-wasm32-32bit",
+        "machine": "wasm32",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      }
+    },
+    {
+      "kind": "default_ui_pilot",
+      "raw_artifact": "reports/browser/default-pilot.json",
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          1
+        ],
+        "parameters": [
+          {
+            "mean": 0.6435764063707995,
+            "sd": 0.1255280203456304,
+            "q05": 0.4290647108635277,
+            "q50": 0.653419367389648,
+            "q95": 0.8321016565545482,
+            "rhat": 1.0226569471820113,
+            "rank_rhat": 1.0080109645549993,
+            "folded_rhat": 1.0226569471820113,
+            "ess_bulk": 353.776566968033,
+            "ess_tail": 241.2569358500462,
+            "ess_mean": 363.06960246501626,
+            "mcse_mean": 0.006587880836777175,
+            "name": "probability",
+            "status": "unreliable",
+            "message": "chains disagree"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "preset": "beta",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.2,
+        "steps": 15,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 100000
+      },
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1371.8335613819515,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 14.777400000000004,
+        "gradient_evaluations": 7707,
+        "mean_acceptance": 0.8573959758637197
+      },
+      "progress": {
+        "completed": 1600,
+        "total": 1600,
+        "warmup_completed": 800,
+        "retained": 800,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "status": "complete",
+      "wall_seconds_including_ui": 15.596927625000001,
+      "model_hash": "cd9652be333fa0dfe7d3abddd535de41e26624fc262e076ef5723c4e612bc4cc",
+      "dimension": 1,
+      "observations": 10,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.12.7",
+        "numpy": "2.0.2",
+        "scipy": "1.14.1",
+        "platform": "Emscripten-3.1.58-wasm32-32bit",
+        "machine": "wasm32",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      }
+    },
+    {
+      "preset": "beta",
+      "algorithm": "nuts",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 47.19002271077481,
+        "transitions": 56,
+        "retained_transitions": 32,
+        "elapsed_seconds": 0.1565000000000012,
+        "gradient_evaluations": 285,
+        "mean_acceptance": 0.8426789769781217
+      },
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 56,
+        "total": 56,
+        "warmup_completed": 24,
+        "retained": 32,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "beta",
+      "algorithm": "vi",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.26069999999999993,
+        "gradient_evaluations": 536,
+        "mean_acceptance": 0
+      },
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 70,
+        "total": 70,
+        "warmup_completed": 0,
+        "retained": 32,
+        "chain": 0,
+        "phase": "variational optimization"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "regression",
+      "algorithm": "nuts",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 4,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 45.80144270054426,
+        "transitions": 56,
+        "retained_transitions": 32,
+        "elapsed_seconds": 0.13129999999999953,
+        "gradient_evaluations": 324,
+        "mean_acceptance": 0.8178829053668617
+      },
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 56,
+        "total": 56,
+        "warmup_completed": 24,
+        "retained": 32,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "regression",
+      "algorithm": "vi",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.18290000000000006,
+        "gradient_evaluations": 536,
+        "mean_acceptance": 0
+      },
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 70,
+        "total": 70,
+        "warmup_completed": 0,
+        "retained": 32,
+        "chain": 0,
+        "phase": "variational optimization"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "gaussian",
+      "algorithm": "nuts",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 2,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 3,
+        "acceptance_sum": 47.252569139184,
+        "transitions": 56,
+        "retained_transitions": 32,
+        "elapsed_seconds": 0.18659999999999854,
+        "gradient_evaluations": 718,
+        "mean_acceptance": 0.8437958774854285
+      },
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 56,
+        "total": 56,
+        "warmup_completed": 24,
+        "retained": 32,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "gaussian",
+      "algorithm": "vi",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.12839999999999918,
+        "gradient_evaluations": 536,
+        "mean_acceptance": 0
+      },
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 70,
+        "total": 70,
+        "warmup_completed": 0,
+        "retained": 32,
+        "chain": 0,
+        "phase": "variational optimization"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "funnel",
+      "algorithm": "nuts",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 2,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 1,
+        "acceptance_sum": 47.163594363874665,
+        "transitions": 56,
+        "retained_transitions": 32,
+        "elapsed_seconds": 0.3874999999999993,
+        "gradient_evaluations": 872,
+        "mean_acceptance": 0.8422070422120476
+      },
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 56,
+        "total": 56,
+        "warmup_completed": 24,
+        "retained": 32,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "reference_kind": "independent generative draws"
+    },
+    {
+      "preset": "funnel",
+      "algorithm": "vi",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.22739999999999938,
+        "gradient_evaluations": 536,
+        "mean_acceptance": 0
+      },
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 70,
+        "total": 70,
+        "warmup_completed": 0,
+        "retained": 32,
+        "chain": 0,
+        "phase": "variational optimization"
+      },
+      "reference_kind": "independent generative draws"
+    },
+    {
+      "preset": "mixture",
+      "algorithm": "nuts",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 46.876064860318074,
+        "transitions": 56,
+        "retained_transitions": 32,
+        "elapsed_seconds": 0.2254000000000005,
+        "gradient_evaluations": 439,
+        "mean_acceptance": 0.8370725867913942
+      },
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 56,
+        "total": 56,
+        "warmup_completed": 24,
+        "retained": 32,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "preset": "mixture",
+      "algorithm": "vi",
+      "status": "complete",
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.2441999999999993,
+        "gradient_evaluations": 536,
+        "mean_acceptance": 0
+      },
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 12,
+        "draws": 16,
+        "seed": 83,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 5,
+        "target_accept": 0.8,
+        "iterations": 35,
+        "batch_size": 4,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 60,
+        "max_gradient_evaluations": 30000
+      },
+      "progress": {
+        "completed": 70,
+        "total": 70,
+        "warmup_completed": 0,
+        "retained": 32,
+        "chain": 0,
+        "phase": "variational optimization"
+      },
+      "reference_kind": "analytic"
+    },
+    {
+      "kind": "ui_run",
+      "preset": "gaussian",
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 100,
+        "draws": 30,
+        "seed": 42,
+        "step_size": 0.2,
+        "steps": 15,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 75,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 100000
+      },
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.5064000000000002,
+        "gradient_evaluations": 1712,
+        "mean_acceptance": 0
+      },
+      "progress": {
+        "completed": 150,
+        "total": 150,
+        "warmup_completed": 0,
+        "retained": 60,
+        "chain": 0,
+        "phase": "variational optimization"
+      }
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "requests": [],
+  "asset_origins": [
+    "http://127.0.0.1:4178"
+  ],
+  "summary": {
+    "passed": 18,
+    "failed": 0
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "name": "Difficult hierarchical geometry",
+  "parameters": [
+    {
+      "name": "y",
+      "shape": [],
+      "constraint": {
+        "type": "real"
+      }
+    },
+    {
+      "name": "base",
+      "shape": [
+        5
+      ],
+      "constraint": {
+        "type": "real"
+      }
+    }
+  ],
+  "data": {},
+  "nodes": [
+    {
+      "name": "half_y",
+      "op": "mul",
+      "args": [
+        "y",
+        0.5
+      ]
+    },
+    {
+      "name": "child_scale",
+      "op": "exp",
+      "args": [
+        "half_y"
+      ]
+    },
+    {
+      "name": "children",
+      "op": "mul",
+      "args": [
+        "base",
+        "child_scale"
+      ]
+    }
+  ],
+  "factors": [
+    {
+      "name": "parent",
+      "distribution": "normal",
+      "value": "y",
+      "params": {
+        "loc": 0,
+        "scale": 3
+      }
+    },
+    {
+      "name": "base_prior",
+      "distribution": "normal",
+      "value": "base",
+      "params": {
+        "loc": 0,
+        "scale": 1
+      }
+    }
+  ],
+  "derived": [
+    "children"
+  ],
+  "report": [
+    "y",
+    "children"
+  ],
+  "density_kind": "normalized generative joint (no observational data)",
+  "metadata": {
+    "preset": "funnel",
+    "config": {
+      "noncentered": true
+    }
+  }
+}

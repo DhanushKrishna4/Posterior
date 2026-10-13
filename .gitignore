@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+node_modules/
+dist/
+build/
+public/runtime/
+public/engine/
+test-results/
+.DS_Store
+reports/browser/initial.png

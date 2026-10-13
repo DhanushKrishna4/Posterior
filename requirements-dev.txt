@@ -1,0 +1,10 @@
+# Reproducible Python 3.12 CI/reference environment, compatible with Pyodide 0.27.7.
+# Python 3.14 development measurements use their recorded native NumPy/SciPy builds.
+numpy==2.0.2
+scipy==1.14.1
+pytest==8.4.2
+arviz==0.21.0
+matplotlib==3.10.8
+emcee==3.1.6
+build==1.3.0
+

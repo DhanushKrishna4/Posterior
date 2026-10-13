@@ -1,0 +1,77 @@
+{
+  "reference": "ArviZ public diagnostic API",
+  "reference_version": "0.21.0",
+  "numpy": "2.4.2",
+  "scipy": "1.17.1",
+  "python": "3.14.3",
+  "input_recipe": "tests/test_diagnostics.py:fixtures; PCG64 seed 20261006; float64",
+  "tolerance": {
+    "relative": 2e-10,
+    "absolute": 2e-10
+  },
+  "fixtures": {
+    "independent_odd": {
+      "rank_rhat": 0.9995943039166907,
+      "folded_rhat": 1.0000748022897146,
+      "rhat": 1.0000748022897146,
+      "ess_bulk": 1980.3250702392631,
+      "ess_tail": 1937.6769046960364,
+      "ess_mean": 1982.988267401904,
+      "mcse_mean": 0.02257306551202434
+    },
+    "independent_even": {
+      "rank_rhat": 0.9996287680956811,
+      "folded_rhat": 1.000057774924063,
+      "rhat": 1.000057774924063,
+      "ess_bulk": 1982.7316804792674,
+      "ess_tail": 1933.0739215611106,
+      "ess_mean": 1985.6659445425878,
+      "mcse_mean": 0.02256916958608834
+    },
+    "autocorrelated": {
+      "rank_rhat": 1.0274147541991139,
+      "folded_rhat": 1.0090364535101717,
+      "rhat": 1.0274147541991139,
+      "ess_bulk": 122.76643316463951,
+      "ess_tail": 325.7494429216676,
+      "ess_mean": 125.93013242699571,
+      "mcse_mean": 0.19378469439480137
+    },
+    "shifted": {
+      "rank_rhat": 1.371564793493405,
+      "folded_rhat": 1.0398844235363034,
+      "rhat": 1.371564793493405,
+      "ess_bulk": 8.933961397741998,
+      "ess_tail": 64.71168516894903,
+      "ess_mean": 8.823263600211048,
+      "mcse_mean": 0.4523834873222104
+    },
+    "unequal_scales": {
+      "rank_rhat": 1.000542876479346,
+      "folded_rhat": 1.2881234718429686,
+      "rhat": 1.2881234718429686,
+      "ess_bulk": 1967.8332820838336,
+      "ess_tail": 42.46495352897282,
+      "ess_mean": 2036.7775645346508,
+      "mcse_mean": 0.05167427592642266
+    },
+    "ties": {
+      "rank_rhat": 0.9996366080344943,
+      "folded_rhat": 1.0001955930684072,
+      "rhat": 1.0001955930684072,
+      "ess_bulk": 1978.4699950042082,
+      "ess_tail": 1923.7138038505782,
+      "ess_mean": 1983.1032352674943,
+      "mcse_mean": 0.02257705978095322
+    },
+    "heavy_tail": {
+      "rank_rhat": 0.9995943039166907,
+      "folded_rhat": 1.0014191721294752,
+      "rhat": 1.0014191721294752,
+      "ess_bulk": 1980.3250702392631,
+      "ess_tail": 1937.6769046960364,
+      "ess_mean": 2011.8813272919656,
+      "mcse_mean": 0.34586113333856294
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "pinned runtime assets in source and production",
+      "assets": 8
+    },
+    {
+      "check": "reproducible Python archive matches current source and production",
+      "sha256": "313ab49f3388652715687eb560310d80b783f7dfb2beb4cbd5a57a3c988f06b7"
+    },
+    {
+      "check": "native evidence source identity and raw checkpoints",
+      "cases": 12
+    },
+    {
+      "check": "quality-gated sampler evidence",
+      "cases": 6
+    },
+    {
+      "check": "production HTTP browser evidence",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "check": "independent inference comparison outcome",
+      "status": "completed_with_failed_checks"
+    }
+  ],
+  "production_files": 15,
+  "production_bytes": 36626498,
+  "source_sha256": {
+    "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+    "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+    "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+    "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+    "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+    "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+    "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+    "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+    "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+    "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+    "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+    "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+    "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+    "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+    "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+  },
+  "production_sha256": {
+    "assets/favicon-Bj9IRiH4.svg": "9bd811196a2a5f8173be41328b30d14159ce9eb2366d1cf3b0b66db5125596eb",
+    "assets/index-BPYi_8pW.css": "9111d0eb9eb33c67dbd724e3fff799fe98cc0e887a14d7f5d4f7409af37d938d",
+    "assets/index-BnDar_E8.js": "f792d1a7b3377c9f9dd70638e9334768eb05a5da33148f47b66741c9232bd188",
+    "assets/worker-oo-vOJ7-.js": "144d1fe44e9df66da2fd798ea012af8ad602c2f06eda1ad5f20a15c024cad9c8",
+    "engine/posterior_lab.zip": "313ab49f3388652715687eb560310d80b783f7dfb2beb4cbd5a57a3c988f06b7",
+    "index.html": "9508dbce6e6db6d6c37c3c6814760a1fc72e7bc2b4d0523c81125abc856f2317",
+    "runtime/manifest.json": "a15d848a47691189dcf37cd99d264e4d2be55aec756e4cae6fdf739fa4e85f55",
+    "runtime/numpy-2.0.2-cp312-cp312-pyodide_2024_0_wasm32.whl": "ebb61241d962b98b21597d7ce43b67668a6d5bab3acec4fbe958657320d7cd08",
+    "runtime/openblas-0.3.26.zip": "787ea9a8a5cd160204388d03324b3b7ce5c9aea14b5680cec987f837e76c5198",
+    "runtime/pyodide-lock.json": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c",
+    "runtime/pyodide.asm.js": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51",
+    "runtime/pyodide.asm.wasm": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f",
+    "runtime/pyodide.mjs": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f",
+    "runtime/python_stdlib.zip": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16",
+    "runtime/scipy-1.14.1-cp312-cp312-pyodide_2024_0_wasm32.whl": "997c50a61564a8ce6a56ea98a42e7f4427e5eb98475a73233e83df6a184f415c"
+  },
+  "limits": [
+    "Saved evidence audit, not a new numerical experiment.",
+    "This local audit does not exercise hosted Pages or remote CI; see deployment evidence separately.",
+    "Browser execution verified in Chromium on macOS; other browsers unverified."
+  ]
+}

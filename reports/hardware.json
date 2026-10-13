@@ -1,0 +1,7 @@
+{
+  "cpu": "Apple M3",
+  "ram_bytes": 8589934592,
+  "architecture": "arm64",
+  "measurement": "sysctl -n machdep.cpu.brand_string hw.memsize",
+  "compute": "local CPU; no GPU or inference service"
+}

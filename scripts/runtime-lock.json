@@ -1,0 +1,51 @@
+{
+  "pyodide": "0.27.7",
+  "source": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/",
+  "packages": [
+    "numpy",
+    "openblas",
+    "scipy"
+  ],
+  "assets": [
+    {
+      "name": "pyodide.mjs",
+      "bytes": 13931,
+      "sha256": "04c052c815abb0bf2981fa38c2dfa58e3120ee5288c956df2b2a15e301782c5f"
+    },
+    {
+      "name": "pyodide.asm.js",
+      "bytes": 1255688,
+      "sha256": "6b4c90de5b7172873f04f21884d0e9d2274e305fe32116558fe3e4fbe3618d51"
+    },
+    {
+      "name": "pyodide.asm.wasm",
+      "bytes": 10105545,
+      "sha256": "a50dd1843f805a0b7c45b61037ee0d7b26dfe85efe0e18ef95a34ad24e401f5f"
+    },
+    {
+      "name": "python_stdlib.zip",
+      "bytes": 2360737,
+      "sha256": "16611534726e5d8ac2bd8f926410b2dcb8d6f49aa24913463533b457a2115c16"
+    },
+    {
+      "name": "pyodide-lock.json",
+      "bytes": 112205,
+      "sha256": "9c45b916001a750f4102fc287494f3eab215909c7535c626a20db80fd6333e2c"
+    },
+    {
+      "name": "numpy-2.0.2-cp312-cp312-pyodide_2024_0_wasm32.whl",
+      "bytes": 3061133,
+      "sha256": "ebb61241d962b98b21597d7ce43b67668a6d5bab3acec4fbe958657320d7cd08"
+    },
+    {
+      "name": "openblas-0.3.26.zip",
+      "bytes": 6117592,
+      "sha256": "787ea9a8a5cd160204388d03324b3b7ce5c9aea14b5680cec987f837e76c5198"
+    },
+    {
+      "name": "scipy-1.14.1-cp312-cp312-pyodide_2024_0_wasm32.whl",
+      "bytes": 13477451,
+      "sha256": "997c50a61564a8ce6a56ea98a42e7f4427e5eb98475a73233e83df6a184f415c"
+    }
+  ]
+}

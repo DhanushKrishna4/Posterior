@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "name": "Two modes, misleading confidence",
+  "parameters": [
+    {
+      "name": "position",
+      "shape": [
+        2
+      ],
+      "constraint": {
+        "type": "real"
+      }
+    }
+  ],
+  "data": {},
+  "nodes": [
+    {
+      "name": "left_logpdf",
+      "op": "logpdf",
+      "args": [],
+      "distribution": "multivariate_normal",
+      "value": "position",
+      "params": {
+        "loc": [
+          -4,
+          0
+        ],
+        "cov": [
+          [
+            0.25,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "name": "right_logpdf",
+      "op": "logpdf",
+      "args": [],
+      "distribution": "multivariate_normal",
+      "value": "position",
+      "params": {
+        "loc": [
+          4,
+          0
+        ],
+        "cov": [
+          [
+            0.25,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "name": "left_weighted",
+      "op": "add",
+      "args": [
+        "left_logpdf",
+        -0.35667494393873245
+      ]
+    },
+    {
+      "name": "right_weighted",
+      "op": "add",
+      "args": [
+        "right_logpdf",
+        -1.2039728043259361
+      ]
+    },
+    {
+      "name": "components",
+      "op": "stack",
+      "args": [
+        "left_weighted",
+        "right_weighted"
+      ]
+    },
+    {
+      "name": "mixture_log_density",
+      "op": "logsumexp",
+      "args": [
+        "components"
+      ]
+    }
+  ],
+  "factors": [
+    {
+      "name": "normalized_mixture",
+      "log_density": "mixture_log_density"
+    }
+  ],
+  "derived": [],
+  "metadata": {
+    "preset": "mixture",
+    "config": {}
+  },
+  "density_kind": "normalized target density"
+}

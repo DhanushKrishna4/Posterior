@@ -1,0 +1,2789 @@
+{
+  "description": "Actual sequential engine outcomes. Quick runs are preliminary; no success requirement imposed on funnel or mixture. Exact targets and quality-gated tests are reported separately.",
+  "seed": 42,
+  "cases": [
+    {
+      "preset": "beta",
+      "config": {},
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 1,
+      "observations": 10,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1369.4590063551125,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 1.9921714448792045,
+        "gradient_evaluations": 7775,
+        "mean_acceptance": 0.8559118789719453
+      },
+      "end_to_end_seconds": 2.0564118749971385,
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          1
+        ],
+        "parameters": [
+          {
+            "mean": 0.6473389508984192,
+            "sd": 0.12585905486930152,
+            "q05": 0.43981871353825713,
+            "q50": 0.6497030326631185,
+            "q95": 0.8413363781897462,
+            "rhat": 1.01259851821882,
+            "rank_rhat": 1.0053937131763695,
+            "folded_rhat": 1.01259851821882,
+            "ess_bulk": 233.53391582054746,
+            "ess_tail": 212.28265170511813,
+            "ess_mean": 242.2265299794269,
+            "mcse_mean": 0.008086742459612445,
+            "name": "probability",
+            "status": "unreliable",
+            "message": "chains disagree"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "cd9652be333fa0dfe7d3abddd535de41e26624fc262e076ef5723c4e612bc4cc",
+      "initial_positions": [
+        [
+          0.36813040296836547
+        ],
+        [
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139
+        ],
+        [
+          -0.12691571444748403
+        ]
+      ],
+      "peak_process_rss_bytes": 113819648,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        0.6473389508984192
+      ],
+      "covariance": [
+        [
+          0.015840501692593843
+        ]
+      ],
+      "quantiles": [
+        [
+          0.43981871353825713
+        ],
+        [
+          0.6497030326631185
+        ],
+        [
+          0.8413363781897462
+        ]
+      ],
+      "absolute_mean_error": [
+        0.004481808041276292
+      ],
+      "raw_artifact": "reports/raw/01-beta-nuts.json.gz",
+      "raw_sha256": "6043e3918b4303f508165461df3064968cbd16f9839210f3b767d34460d09707"
+    },
+    {
+      "preset": "beta",
+      "config": {},
+      "algorithm": "vi",
+      "settings": {
+        "algorithm": "vi",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 1,
+      "observations": 10,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0.0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 9.47831564592343,
+        "gradient_evaluations": 42240,
+        "mean_acceptance": 0.0
+      },
+      "end_to_end_seconds": 9.525513791995763,
+      "diagnostics": {
+        "status": "not applicable",
+        "message": "R-hat and MCMC ESS do not apply to variational draws. Each fit is reported separately.",
+        "parameters": [],
+        "fits": [
+          {
+            "run": 0,
+            "mean": [
+              0.6448822656024609
+            ],
+            "sd": [
+              0.12621900806481648
+            ],
+            "q05": [
+              0.42573751346568706
+            ],
+            "q95": [
+              0.8290122549282899
+            ]
+          },
+          {
+            "run": 1,
+            "mean": [
+              0.629762681357628
+            ],
+            "sd": [
+              0.12949945265023627
+            ],
+            "q05": [
+              0.4080739153235161
+            ],
+            "q95": [
+              0.8033800645012531
+            ]
+          },
+          {
+            "run": 2,
+            "mean": [
+              0.6519611630165363
+            ],
+            "sd": [
+              0.12591618659745904
+            ],
+            "q05": [
+              0.4382892900012162
+            ],
+            "q95": [
+              0.8317392530553659
+            ]
+          },
+          {
+            "run": 3,
+            "mean": [
+              0.6551156144240793
+            ],
+            "sd": [
+              0.11318626654466296
+            ],
+            "q05": [
+              0.4509960684790014
+            ],
+            "q95": [
+              0.8154777322284822
+            ]
+          }
+        ]
+      },
+      "model_hash": "cd9652be333fa0dfe7d3abddd535de41e26624fc262e076ef5723c4e612bc4cc",
+      "initial_positions": [
+        [
+          0.36813040296836547
+        ],
+        [
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139
+        ],
+        [
+          -0.12691571444748403
+        ]
+      ],
+      "peak_process_rss_bytes": 123338752,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "fits": [
+        {
+          "run": 0,
+          "mu": [
+            0.6270614025606572
+          ],
+          "unconstrained_variance": [
+            0.34213113958984304
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -2.2153019697752114,
+            "mcse": 0.059114829770605025,
+            "n": 128
+          }
+        },
+        {
+          "run": 1,
+          "mu": [
+            0.6194008897619682
+          ],
+          "unconstrained_variance": [
+            0.3356692377747398
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -2.1616700358141716,
+            "mcse": 0.06088765042806254,
+            "n": 128
+          }
+        },
+        {
+          "run": 2,
+          "mu": [
+            0.6740846397919785
+          ],
+          "unconstrained_variance": [
+            0.29686548672699764
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -2.2363127197669495,
+            "mcse": 0.05966302690701175,
+            "n": 128
+          }
+        },
+        {
+          "run": 3,
+          "mu": [
+            0.6514159650465735
+          ],
+          "unconstrained_variance": [
+            0.33056650732577464
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -2.1497383340284326,
+            "mcse": 0.04612672582539135,
+            "n": 128
+          }
+        }
+      ],
+      "raw_artifact": "reports/raw/02-beta-vi.json.gz",
+      "raw_sha256": "28c9676c63a231c37d9be679de40b7dc603a76badb7f6fea3bcd153d8acd6035"
+    },
+    {
+      "preset": "regression",
+      "config": {},
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 24,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 8,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1366.53167955851,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 1.8235970871392055,
+        "gradient_evaluations": 9882,
+        "mean_acceptance": 0.8540822997240687
+      },
+      "end_to_end_seconds": 1.9154890410063672,
+      "diagnostics": {
+        "status": "assessed",
+        "message": "no disagreement detected; unseen modes remain possible",
+        "shape": [
+          4,
+          200,
+          2
+        ],
+        "parameters": [
+          {
+            "mean": 0.6920285284068313,
+            "sd": 0.12225547956479825,
+            "q05": 0.47785763641142087,
+            "q50": 0.6933398158569001,
+            "q95": 0.8900387337831782,
+            "rhat": 1.0076626007895126,
+            "rank_rhat": 0.9990526934603372,
+            "folded_rhat": 1.0076626007895126,
+            "ess_bulk": 751.835997801185,
+            "ess_tail": 424.9109882327109,
+            "ess_mean": 743.4609488096189,
+            "mcse_mean": 0.0044837279380772746,
+            "name": "coefficient[0]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": 1.2971373848825598,
+            "sd": 0.1049352934611812,
+            "q05": 1.1252649475938374,
+            "q50": 1.2966408782922147,
+            "q95": 1.4772113389619357,
+            "rhat": 1.002797874062343,
+            "rank_rhat": 1.0013136351345526,
+            "folded_rhat": 1.002797874062343,
+            "ess_bulk": 603.1373572599194,
+            "ess_tail": 543.431301883064,
+            "ess_mean": 600.7936524146861,
+            "mcse_mean": 0.004281134907977977,
+            "name": "coefficient[1]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "37a05ff0d12bed795ea69140b7b8248d14d63c1f6c13bf794be9ee043aa5e3a0",
+      "initial_positions": [
+        [
+          0.36813040296836547,
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139,
+          -0.12691571444748403
+        ],
+        [
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.011222154996060687,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 123338752,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        0.6920285284068316,
+        1.2971373848825596
+      ],
+      "covariance": [
+        [
+          0.014946402283618801,
+          0.0007873975401965654
+        ],
+        [
+          0.0007873975401965654,
+          0.011011415813784215
+        ]
+      ],
+      "quantiles": [
+        [
+          0.47785763641142087,
+          1.1252649475938374
+        ],
+        [
+          0.6933398158569001,
+          1.2966408782922147
+        ],
+        [
+          0.8900387337831782,
+          1.4772113389619357
+        ]
+      ],
+      "absolute_mean_error": [
+        0.0013768674929548474,
+        0.001042102087035035
+      ],
+      "raw_artifact": "reports/raw/03-regression-nuts.json.gz",
+      "raw_sha256": "971cef94ba9e78b5871c4eb28f17e2d75c6183eae11d06b45703123f2bdd4c32"
+    },
+    {
+      "preset": "regression",
+      "config": {},
+      "algorithm": "vi",
+      "settings": {
+        "algorithm": "vi",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 24,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0.0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 6.908153114040033,
+        "gradient_evaluations": 42240,
+        "mean_acceptance": 0.0
+      },
+      "end_to_end_seconds": 6.956283457999234,
+      "diagnostics": {
+        "status": "not applicable",
+        "message": "R-hat and MCMC ESS do not apply to variational draws. Each fit is reported separately.",
+        "parameters": [],
+        "fits": [
+          {
+            "run": 0,
+            "mean": [
+              0.7168844763309298,
+              1.3049110416391299
+            ],
+            "sd": [
+              0.11660057177499313,
+              0.1027209024822984
+            ],
+            "q05": [
+              0.5239797731870216,
+              1.1370045836563827
+            ],
+            "q95": [
+              0.9097939037240257,
+              1.4642649699791566
+            ]
+          },
+          {
+            "run": 1,
+            "mean": [
+              0.7023209751854382,
+              1.2802083779582585
+            ],
+            "sd": [
+              0.12725537872941114,
+              0.10260918856002325
+            ],
+            "q05": [
+              0.4856348794673431,
+              1.1239762150274097
+            ],
+            "q95": [
+              0.8966140597970704,
+              1.4429530150601424
+            ]
+          },
+          {
+            "run": 2,
+            "mean": [
+              0.7138541500129952,
+              1.3075689533022687
+            ],
+            "sd": [
+              0.12937673191717616,
+              0.09946128394086202
+            ],
+            "q05": [
+              0.5135326180879062,
+              1.1559069743695645
+            ],
+            "q95": [
+              0.9071886188339331,
+              1.476014675453386
+            ]
+          },
+          {
+            "run": 3,
+            "mean": [
+              0.699145338455271,
+              1.2955349324968979
+            ],
+            "sd": [
+              0.11390694514481522,
+              0.09599114383649776
+            ],
+            "q05": [
+              0.51371917814085,
+              1.1440051641571225
+            ],
+            "q95": [
+              0.8670964954379389,
+              1.4517240866612224
+            ]
+          }
+        ]
+      },
+      "model_hash": "37a05ff0d12bed795ea69140b7b8248d14d63c1f6c13bf794be9ee043aa5e3a0",
+      "initial_positions": [
+        [
+          0.36813040296836547,
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139,
+          -0.12691571444748403
+        ],
+        [
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.011222154996060687,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 123338752,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "fits": [
+        {
+          "run": 0,
+          "mu": [
+            0.7132450398913132,
+            1.3028632140406873
+          ],
+          "unconstrained_variance": [
+            0.015064495578857407,
+            0.010087570527781519
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -29.577182499310688,
+            "mcse": 0.083542814711442,
+            "n": 128
+          }
+        },
+        {
+          "run": 1,
+          "mu": [
+            0.7005731723981814,
+            1.2875103697407144
+          ],
+          "unconstrained_variance": [
+            0.015779641250878267,
+            0.010885696471166868
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -29.637669467336018,
+            "mcse": 0.0914504095446478,
+            "n": 128
+          }
+        },
+        {
+          "run": 2,
+          "mu": [
+            0.7149779508162452,
+            1.3079519186203503
+          ],
+          "unconstrained_variance": [
+            0.015349392940881518,
+            0.010086556303576997
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -29.719489570965944,
+            "mcse": 0.09180238711364984,
+            "n": 128
+          }
+        },
+        {
+          "run": 3,
+          "mu": [
+            0.6939927283660423,
+            1.2848549122055608
+          ],
+          "unconstrained_variance": [
+            0.014917641221482526,
+            0.010123943120682311
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -29.74773685573764,
+            "mcse": 0.08292330315920016,
+            "n": 128
+          }
+        }
+      ],
+      "raw_artifact": "reports/raw/04-regression-vi.json.gz",
+      "raw_sha256": "5e732f0c0772ba42204e1141c0733beb26fdca00cdaccbd6dc34fd22acd1f5dd"
+    },
+    {
+      "preset": "gaussian",
+      "config": {},
+      "algorithm": "hmc",
+      "settings": {
+        "algorithm": "hmc",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 105,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1392.4690555499315,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 2.029731937975157,
+        "gradient_evaluations": 19217,
+        "mean_acceptance": 0.8702931597187071
+      },
+      "end_to_end_seconds": 2.1096430420002434,
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          2
+        ],
+        "parameters": [
+          {
+            "mean": 0.07567157907049087,
+            "sd": 1.024527540659308,
+            "q05": -1.7510395208554383,
+            "q50": 0.10644903317132878,
+            "q95": 1.6933498225922852,
+            "rhat": 1.0141890321186098,
+            "rank_rhat": 1.0141890321186098,
+            "folded_rhat": 0.9964328393092293,
+            "ess_bulk": 538.0479747307397,
+            "ess_tail": 639.6312403904485,
+            "ess_mean": 534.3448082584923,
+            "mcse_mean": 0.044321335712486185,
+            "name": "position[0]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": 0.0886100955614809,
+            "sd": 1.0275043298186752,
+            "q05": -1.625919715550003,
+            "q50": 0.13651518741318425,
+            "q95": 1.7236211243855402,
+            "rhat": 1.0156264853885517,
+            "rank_rhat": 1.0156264853885517,
+            "folded_rhat": 0.9993450929323288,
+            "ess_bulk": 514.952846870578,
+            "ess_tail": 620.7771745246957,
+            "ess_mean": 517.7246943139802,
+            "mcse_mean": 0.04515795021638254,
+            "name": "position[1]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "a28cc787677ef835067ebb8a5136243223fe7951229bf1443898123720bcc166",
+      "initial_positions": [
+        [
+          0.36813040296836547,
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139,
+          -0.12691571444748403
+        ],
+        [
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.011222154996060687,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 125124608,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        0.07567157907049075,
+        0.08861009556148101
+      ],
+      "covariance": [
+        [
+          1.0496566815694097,
+          0.9995364239036804
+        ],
+        [
+          0.9995364239036804,
+          1.0557651477961247
+        ]
+      ],
+      "quantiles": [
+        [
+          -1.7510395208554383,
+          -1.625919715550003
+        ],
+        [
+          0.10644903317132878,
+          0.13651518741318425
+        ],
+        [
+          1.6933498225922852,
+          1.7236211243855402
+        ]
+      ],
+      "absolute_mean_error": [
+        0.07567157907049075,
+        0.08861009556148101
+      ],
+      "raw_artifact": "reports/raw/05-gaussian-hmc.json.gz",
+      "raw_sha256": "ec5310d165f2be638c9a8ada15be5044dd3417da51a137aa61fdcb9712c18b3b"
+    },
+    {
+      "preset": "gaussian",
+      "config": {},
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 12,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1385.120688578185,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 2.146607502232655,
+        "gradient_evaluations": 19196,
+        "mean_acceptance": 0.8657004303613657
+      },
+      "end_to_end_seconds": 2.2363766670023324,
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          2
+        ],
+        "parameters": [
+          {
+            "mean": -0.008987266600526542,
+            "sd": 0.9631133666430515,
+            "q05": -1.4791786082697977,
+            "q50": -0.07621272738293063,
+            "q95": 1.5937358310590883,
+            "rhat": 1.0176004457557843,
+            "rank_rhat": 1.0176004457557843,
+            "folded_rhat": 1.0147137289585055,
+            "ess_bulk": 207.42360990210446,
+            "ess_tail": 256.8852927132177,
+            "ess_mean": 205.1528905912784,
+            "mcse_mean": 0.06724168534045558,
+            "name": "position[0]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": -0.026809126577433222,
+            "sd": 0.9686486534424322,
+            "q05": -1.4535665100748567,
+            "q50": -0.06060982918174885,
+            "q95": 1.5923747579068745,
+            "rhat": 1.0169020796372348,
+            "rank_rhat": 1.0169020796372348,
+            "folded_rhat": 1.0063135460122976,
+            "ess_bulk": 196.17001593706115,
+            "ess_tail": 249.23248106221217,
+            "ess_mean": 194.18877147350602,
+            "mcse_mean": 0.06951110972807299,
+            "name": "position[1]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "a28cc787677ef835067ebb8a5136243223fe7951229bf1443898123720bcc166",
+      "initial_positions": [
+        [
+          0.36813040296836547,
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139,
+          -0.12691571444748403
+        ],
+        [
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.011222154996060687,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 131219456,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        -0.008987266600526594,
+        -0.02680912657743324
+      ],
+      "covariance": [
+        [
+          0.927587357006513,
+          0.8835962454911723
+        ],
+        [
+          0.8835962454911723,
+          0.9382802138158373
+        ]
+      ],
+      "quantiles": [
+        [
+          -1.4791786082697977,
+          -1.4535665100748567
+        ],
+        [
+          -0.07621272738293063,
+          -0.06060982918174885
+        ],
+        [
+          1.5937358310590883,
+          1.5923747579068745
+        ]
+      ],
+      "absolute_mean_error": [
+        0.008987266600526594,
+        0.02680912657743324
+      ],
+      "raw_artifact": "reports/raw/06-gaussian-nuts.json.gz",
+      "raw_sha256": "d5e6d47f776f5f1d398bc63ecd3ee43cc3f46588eaba5d4acced78804fa70573"
+    },
+    {
+      "preset": "gaussian",
+      "config": {},
+      "algorithm": "vi",
+      "settings": {
+        "algorithm": "vi",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0.0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 4.0238833821204025,
+        "gradient_evaluations": 42240,
+        "mean_acceptance": 0.0
+      },
+      "end_to_end_seconds": 4.073141875000147,
+      "diagnostics": {
+        "status": "not applicable",
+        "message": "R-hat and MCMC ESS do not apply to variational draws. Each fit is reported separately.",
+        "parameters": [],
+        "fits": [
+          {
+            "run": 0,
+            "mean": [
+              0.024010202071780683,
+              -0.005680875354059569
+            ],
+            "sd": [
+              0.30134423819579964,
+              0.2994018064530251
+            ],
+            "q05": [
+              -0.4745355591399581,
+              -0.49507977684664073
+            ],
+            "q95": [
+              0.5225681727028287,
+              0.4587898687441231
+            ]
+          },
+          {
+            "run": 1,
+            "mean": [
+              0.021388002915763996,
+              -0.037949209663786405
+            ],
+            "sd": [
+              0.30318343373772894,
+              0.2984141771638163
+            ],
+            "q05": [
+              -0.4948623528568268,
+              -0.4923129270053374
+            ],
+            "q95": [
+              0.4842874507206791,
+              0.4353544744421793
+            ]
+          },
+          {
+            "run": 2,
+            "mean": [
+              0.024139162735912868,
+              -0.01025894373992253
+            ],
+            "sd": [
+              0.3399562821028014,
+              0.30890104860502643
+            ],
+            "q05": [
+              -0.502234955772408,
+              -0.48128186310703075
+            ],
+            "q95": [
+              0.5321537512073679,
+              0.5128899453941568
+            ]
+          },
+          {
+            "run": 3,
+            "mean": [
+              0.04666634356986696,
+              -0.010927291171837978
+            ],
+            "sd": [
+              0.2607887914403474,
+              0.28901691379543076
+            ],
+            "q05": [
+              -0.37786496300097655,
+              -0.467163817202763
+            ],
+            "q95": [
+              0.4311888078922434,
+              0.45933804269876444
+            ]
+          }
+        ]
+      },
+      "model_hash": "a28cc787677ef835067ebb8a5136243223fe7951229bf1443898123720bcc166",
+      "initial_positions": [
+        [
+          0.36813040296836547,
+          -0.21830586638095775
+        ],
+        [
+          -0.09259884053651139,
+          -0.12691571444748403
+        ],
+        [
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.011222154996060687,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 136052736,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "fits": [
+        {
+          "run": 0,
+          "mu": [
+            0.014604388835506844,
+            -0.011649702218519931
+          ],
+          "unconstrained_variance": [
+            0.10061877327354732,
+            0.08569939660185388
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -1.1340284749944864,
+            "mcse": 0.11505844903359311,
+            "n": 128
+          },
+          "exact_optimal_variance": [
+            0.09750000000000003,
+            0.09750000000000003
+          ],
+          "reverse_kl": 1.1716368094275325,
+          "optimal_reverse_kl": 1.1639514504891681,
+          "true_marginal_variance": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "run": 1,
+          "mu": [
+            0.017223897195221893,
+            -0.01671312057665724
+          ],
+          "unconstrained_variance": [
+            0.08956859551821254,
+            0.09207094867139197
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -1.1709742666087017,
+            "mcse": 0.11232898369841694,
+            "n": 128
+          },
+          "exact_optimal_variance": [
+            0.09750000000000003,
+            0.09750000000000003
+          ],
+          "reverse_kl": 1.1722651982417192,
+          "optimal_reverse_kl": 1.1639514504891681,
+          "true_marginal_variance": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "run": 2,
+          "mu": [
+            0.027092113681849217,
+            -0.009069552414498066
+          ],
+          "unconstrained_variance": [
+            0.10598026298829843,
+            0.0972911999474443
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -1.3439023712149711,
+            "mcse": 0.1517893662350653,
+            "n": 128
+          },
+          "exact_optimal_variance": [
+            0.09750000000000003,
+            0.09750000000000003
+          ],
+          "reverse_kl": 1.1723208496773907,
+          "optimal_reverse_kl": 1.1639514504891681,
+          "true_marginal_variance": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "run": 3,
+          "mu": [
+            0.0348694952194452,
+            -0.04308345038098918
+          ],
+          "unconstrained_variance": [
+            0.07819474935028901,
+            0.09177700505672608
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -1.2785541017698405,
+            "mcse": 0.09775881324654588,
+            "n": 128
+          },
+          "exact_optimal_variance": [
+            0.09750000000000003,
+            0.09750000000000003
+          ],
+          "reverse_kl": 1.2065636705566969,
+          "optimal_reverse_kl": 1.1639514504891681,
+          "true_marginal_variance": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "raw_artifact": "reports/raw/07-gaussian-vi.json.gz",
+      "raw_sha256": "446cff454401fdf2c96cdc8c8f5ca885d3e891f8d26ba764893d2c3adbd41f66"
+    },
+    {
+      "preset": "funnel",
+      "config": {
+        "noncentered": false
+      },
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 6,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 1,
+        "warmup_divergences": 24,
+        "max_depth_events": 60,
+        "warmup_max_depth_events": 80,
+        "acceptance_sum": 1330.6683985417897,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 11.512359860273136,
+        "gradient_evaluations": 61627,
+        "mean_acceptance": 0.8316677490886185
+      },
+      "end_to_end_seconds": 11.663543499998923,
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          6
+        ],
+        "parameters": [
+          {
+            "mean": 1.5981828705145467,
+            "sd": 2.1259115247423965,
+            "q05": -1.574426505392351,
+            "q50": 1.4007857272256623,
+            "q95": 5.290055507160817,
+            "rhat": 1.0415506065655387,
+            "rank_rhat": 1.029179162225341,
+            "folded_rhat": 1.0415506065655387,
+            "ess_bulk": 38.45533454275566,
+            "ess_tail": 59.20516361131263,
+            "ess_mean": 37.743915847967756,
+            "mcse_mean": 0.34603633903193504,
+            "name": "y",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": 0.2190022846295596,
+            "sd": 6.195101401370196,
+            "q05": -7.330701449357147,
+            "q50": -0.008238728050161027,
+            "q95": 9.042260462402645,
+            "rhat": 1.0327290987590563,
+            "rank_rhat": 0.9968052855672218,
+            "folded_rhat": 1.0327290987590563,
+            "ess_bulk": 759.972407823051,
+            "ess_tail": 165.74160031053796,
+            "ess_mean": 664.8823323193204,
+            "mcse_mean": 0.2402569850770518,
+            "name": "children[0]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": 1.0232252598327316,
+            "sd": 7.1864405619396345,
+            "q05": -6.728526548053877,
+            "q50": 0.043192432019543606,
+            "q95": 11.347902485948307,
+            "rhat": 1.0241552136667538,
+            "rank_rhat": 1.0061282366322573,
+            "folded_rhat": 1.0241552136667538,
+            "ess_bulk": 373.7346614029235,
+            "ess_tail": 105.09017621632664,
+            "ess_mean": 143.34035951775465,
+            "mcse_mean": 0.6002464403522615,
+            "name": "children[1]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": 0.2099805383961951,
+            "sd": 5.243581012743399,
+            "q05": -6.116413765514316,
+            "q50": 0.09597726411553431,
+            "q95": 6.647554071637361,
+            "rhat": 1.0101349513793438,
+            "rank_rhat": 1.001142114367108,
+            "folded_rhat": 1.0101349513793438,
+            "ess_bulk": 552.0693687635661,
+            "ess_tail": 196.8977024791532,
+            "ess_mean": 358.1922206205145,
+            "mcse_mean": 0.2770574977012798,
+            "name": "children[2]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": -1.0341222289603254,
+            "sd": 6.021767762716259,
+            "q05": -10.790338827847043,
+            "q50": -0.12298865335108809,
+            "q95": 5.861542016520601,
+            "rhat": 1.0289822615027393,
+            "rank_rhat": 1.0050708916853615,
+            "folded_rhat": 1.0289822615027393,
+            "ess_bulk": 331.96505751118644,
+            "ess_tail": 165.11198036110179,
+            "ess_mean": 204.57182878223813,
+            "mcse_mean": 0.4210184117452828,
+            "name": "children[3]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": -0.11634515024202897,
+            "sd": 4.804553569494182,
+            "q05": -8.154939663952542,
+            "q50": -0.14028159419878267,
+            "q95": 8.326177372235017,
+            "rhat": 1.0198594493950244,
+            "rank_rhat": 1.0124745732972698,
+            "folded_rhat": 1.0198594493950244,
+            "ess_bulk": 287.87522050583914,
+            "ess_tail": 108.44189980557887,
+            "ess_mean": 242.84707985252123,
+            "mcse_mean": 0.3083092801259122,
+            "name": "children[4]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "0740c6ba2d805254f09335aeae45420bced0b28795b678ee4e3a9c2d829cd230",
+      "initial_positions": [
+        [
+          -1.0,
+          -0.21830586638095775,
+          -0.09259884053651139,
+          -0.12691571444748403,
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.33333333333333337,
+          -0.2429037949346718,
+          0.44909180722864417,
+          0.4466480753254771,
+          -0.21942806159589356,
+          0.7510613187544163
+        ],
+        [
+          0.33333333333333326,
+          0.44937557009753926,
+          0.03565523720787849,
+          0.139134194824428,
+          -0.31084136284779934,
+          0.028346463403248652
+        ],
+        [
+          1.0,
+          0.15229903675835965,
+          0.18790875495485526,
+          -0.009781174897411654,
+          -0.16675388797951265,
+          -0.27865429178996004
+        ]
+      ],
+      "peak_process_rss_bytes": 138919936,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        1.5981828705145469,
+        0.2190022846295595,
+        1.0232252598327323,
+        0.20998053839619518,
+        -1.0341222289603256,
+        -0.1163451502420289
+      ],
+      "covariance": [
+        [
+          4.519499811032541,
+          0.9508447487170245,
+          4.062332301736178,
+          0.6864485590827013,
+          -4.122269010435558,
+          -0.2138840354340316
+        ],
+        [
+          0.9508447487170245,
+          38.37928137325897,
+          2.0548742520089514,
+          3.9372195244302333,
+          4.85357790061993,
+          1.0701039756476756
+        ],
+        [
+          4.062332301736178,
+          2.0548742520089514,
+          51.64492795029127,
+          5.398656688292636,
+          -11.054745977614171,
+          0.0006342650012619649
+        ],
+        [
+          0.6864485590827013,
+          3.9372195244302333,
+          5.398656688292636,
+          27.495141837203082,
+          -2.981683950341968,
+          1.7475212072132087
+        ],
+        [
+          -4.122269010435558,
+          4.85357790061993,
+          -11.054745977614171,
+          -2.981683950341968,
+          36.26168698808878,
+          0.6953027531588561
+        ],
+        [
+          -0.2138840354340316,
+          1.0701039756476756,
+          0.0006342650012619649,
+          1.7475212072132087,
+          0.6953027531588561,
+          23.083735002139292
+        ]
+      ],
+      "quantiles": [
+        [
+          -1.574426505392351,
+          -7.330701449357147,
+          -6.728526548053877,
+          -6.116413765514316,
+          -10.790338827847043,
+          -8.154939663952542
+        ],
+        [
+          1.4007857272256623,
+          -0.008238728050161027,
+          0.043192432019543606,
+          0.09597726411553431,
+          -0.12298865335108809,
+          -0.14028159419878267
+        ],
+        [
+          5.290055507160817,
+          9.042260462402645,
+          11.347902485948307,
+          6.647554071637361,
+          5.861542016520601,
+          8.326177372235017
+        ]
+      ],
+      "narrow_coverage": [
+        {
+          "chain": 0,
+          "fraction_y_below_minus3": 0.05
+        },
+        {
+          "chain": 1,
+          "fraction_y_below_minus3": 0.0
+        },
+        {
+          "chain": 2,
+          "fraction_y_below_minus3": 0.0
+        },
+        {
+          "chain": 3,
+          "fraction_y_below_minus3": 0.0
+        }
+      ],
+      "raw_artifact": "reports/raw/08-funnel-nuts.json.gz",
+      "raw_sha256": "a1f10565c9399e17391b583ef57eac484d04560365b62b56cbe002b3ef016e25"
+    },
+    {
+      "preset": "funnel",
+      "config": {
+        "noncentered": true
+      },
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 6,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 2,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1368.394893940679,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 2.5772583621001104,
+        "gradient_evaluations": 13591,
+        "mean_acceptance": 0.8552468087129244
+      },
+      "end_to_end_seconds": 2.7208512910001446,
+      "diagnostics": {
+        "status": "assessed",
+        "message": "no disagreement detected; unseen modes remain possible",
+        "shape": [
+          4,
+          200,
+          6
+        ],
+        "parameters": [
+          {
+            "mean": -0.036802812934196134,
+            "sd": 2.970626778101365,
+            "q05": -5.068327560293144,
+            "q50": 0.04239583708140383,
+            "q95": 4.7816972188136715,
+            "rhat": 1.000229206837451,
+            "rank_rhat": 0.9980273818758597,
+            "folded_rhat": 1.000229206837451,
+            "ess_bulk": 1175.783225910457,
+            "ess_tail": 608.5128065158516,
+            "ess_mean": 1168.3498563228586,
+            "mcse_mean": 0.08690837644513244,
+            "name": "y",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": -0.31118691420824207,
+            "sd": 7.71133066042652,
+            "q05": -6.177298756628386,
+            "q50": -0.009512305459129483,
+            "q95": 4.607348722574924,
+            "rhat": 1.009659069355112,
+            "rank_rhat": 1.009659069355112,
+            "folded_rhat": 1.0019228355265934,
+            "ess_bulk": 656.6649772261347,
+            "ess_tail": 538.1514567142104,
+            "ess_mean": 512.2697523069112,
+            "mcse_mean": 0.34070614722504894,
+            "name": "children[0]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": 0.33129135261402887,
+            "sd": 7.370972135462592,
+            "q05": -4.681174599380186,
+            "q50": 0.03266282357796811,
+            "q95": 4.546524220145274,
+            "rhat": 1.0002393919119168,
+            "rank_rhat": 0.99985796773183,
+            "folded_rhat": 1.0002393919119168,
+            "ess_bulk": 741.3797805762892,
+            "ess_tail": 502.3332072248419,
+            "ess_mean": 549.8944184130994,
+            "mcse_mean": 0.3143294797200728,
+            "name": "children[1]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": 0.15823590563548645,
+            "sd": 6.533990784590739,
+            "q05": -5.041285918253529,
+            "q50": -0.004107419383697937,
+            "q95": 5.1249374573759905,
+            "rhat": 0.9987101178050753,
+            "rank_rhat": 0.9987101178050753,
+            "folded_rhat": 0.9969456920808547,
+            "ess_bulk": 800.8840552945651,
+            "ess_tail": 653.9018210906213,
+            "ess_mean": 787.6745113347463,
+            "mcse_mean": 0.23281187124084649,
+            "name": "children[2]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": 0.06794174136223399,
+            "sd": 6.895604054417308,
+            "q05": -5.871599941993164,
+            "q50": -0.009721572719675494,
+            "q95": 5.695096996231868,
+            "rhat": 0.9994944333361213,
+            "rank_rhat": 0.9990085639698525,
+            "folded_rhat": 0.9994944333361213,
+            "ess_bulk": 933.018161048879,
+            "ess_tail": 645.1290962674215,
+            "ess_mean": 705.6521101063328,
+            "mcse_mean": 0.2595834463767517,
+            "name": "children[3]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": 0.3031416095413757,
+            "sd": 5.9305994516977645,
+            "q05": -3.9036976082316466,
+            "q50": 0.014879094882228463,
+            "q95": 6.6898606103769875,
+            "rhat": 1.0015339094067934,
+            "rank_rhat": 1.0015339094067934,
+            "folded_rhat": 1.0013871551326976,
+            "ess_bulk": 890.7860400351663,
+            "ess_tail": 650.5939592668225,
+            "ess_mean": 688.0893187259795,
+            "mcse_mean": 0.22608730912724828,
+            "name": "children[4]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "d9829bd0c860b17e13393c4b83b7171f5889e3458cc84a3e6b12babf563935b5",
+      "initial_positions": [
+        [
+          -1.0,
+          -0.21830586638095775,
+          -0.09259884053651139,
+          -0.12691571444748403,
+          0.018210997988513746,
+          0.08873353701884931
+        ],
+        [
+          -0.33333333333333337,
+          -0.2429037949346718,
+          0.44909180722864417,
+          0.4466480753254771,
+          -0.21942806159589356,
+          0.7510613187544163
+        ],
+        [
+          0.33333333333333326,
+          0.44937557009753926,
+          0.03565523720787849,
+          0.139134194824428,
+          -0.31084136284779934,
+          0.028346463403248652
+        ],
+        [
+          1.0,
+          0.15229903675835965,
+          0.18790875495485526,
+          -0.009781174897411654,
+          -0.16675388797951265,
+          -0.27865429178996004
+        ]
+      ],
+      "peak_process_rss_bytes": 150241280,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        -0.03680281293419616,
+        -0.3111869142082423,
+        0.33129135261402837,
+        0.15823590563548642,
+        0.06794174136223398,
+        0.30314160954137576
+      ],
+      "covariance": [
+        [
+          8.824623454772896,
+          -1.9108531455390865,
+          2.232576924275321,
+          1.007385288355805,
+          0.05845060848228943,
+          1.3567543936249784
+        ],
+        [
+          -1.9108531455390865,
+          59.46462055443411,
+          -9.279646007346477,
+          -5.59686497304515,
+          -8.895464569290894,
+          7.557180278018798
+        ],
+        [
+          2.232576924275321,
+          -9.279646007346477,
+          54.33123022176596,
+          -8.365229017645465,
+          -11.839154141367311,
+          -10.816404304126456
+        ],
+        [
+          1.007385288355805,
+          -5.59686497304515,
+          -8.365229017645465,
+          42.6930355731167,
+          4.547303116134199,
+          5.595131560718319
+        ],
+        [
+          0.05845060848228943,
+          -8.895464569290894,
+          -11.839154141367311,
+          4.547303116134199,
+          47.54935527529642,
+          2.4882251602470706
+        ],
+        [
+          1.3567543936249784,
+          7.557180278018798,
+          -10.816404304126456,
+          5.595131560718319,
+          2.4882251602470706,
+          35.17200985647782
+        ]
+      ],
+      "quantiles": [
+        [
+          -5.068327560293144,
+          -6.177298756628386,
+          -4.681174599380186,
+          -5.041285918253529,
+          -5.871599941993164,
+          -3.9036976082316466
+        ],
+        [
+          0.04239583708140383,
+          -0.009512305459129483,
+          0.03266282357796811,
+          -0.004107419383697937,
+          -0.009721572719675494,
+          0.014879094882228463
+        ],
+        [
+          4.7816972188136715,
+          4.607348722574924,
+          4.546524220145274,
+          5.1249374573759905,
+          5.695096996231868,
+          6.6898606103769875
+        ]
+      ],
+      "narrow_coverage": [
+        {
+          "chain": 0,
+          "fraction_y_below_minus3": 0.18
+        },
+        {
+          "chain": 1,
+          "fraction_y_below_minus3": 0.14
+        },
+        {
+          "chain": 2,
+          "fraction_y_below_minus3": 0.145
+        },
+        {
+          "chain": 3,
+          "fraction_y_below_minus3": 0.14
+        }
+      ],
+      "raw_artifact": "reports/raw/09-funnel-nuts.json.gz",
+      "raw_sha256": "6b55b160b21355707b80eb5ccfdb82908a8468f12113044b85267fd02cf2d40a"
+    },
+    {
+      "preset": "mixture",
+      "config": {},
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "one_mode",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 9,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1369.0110029292005,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 2.79629782109987,
+        "gradient_evaluations": 10132,
+        "mean_acceptance": 0.8556318768307503
+      },
+      "end_to_end_seconds": 2.879355624994787,
+      "diagnostics": {
+        "status": "assessed",
+        "message": "no disagreement detected; unseen modes remain possible",
+        "shape": [
+          4,
+          200,
+          2
+        ],
+        "parameters": [
+          {
+            "mean": -4.015107504706881,
+            "sd": 0.4687115117837297,
+            "q05": -4.784780215770752,
+            "q50": -4.029984063086932,
+            "q95": -3.2623913203719987,
+            "rhat": 0.9984556875901298,
+            "rank_rhat": 0.9984556875901298,
+            "folded_rhat": 0.9971818587468291,
+            "ess_bulk": 836.9743230032416,
+            "ess_tail": 617.2262531336628,
+            "ess_mean": 833.765109152687,
+            "mcse_mean": 0.01623243832999914,
+            "name": "position[0]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          },
+          {
+            "mean": 0.018148017625117644,
+            "sd": 0.998496065954543,
+            "q05": -1.545354999606162,
+            "q50": 0.014367311295589899,
+            "q95": 1.6365902388406337,
+            "rhat": 1.0060171862296636,
+            "rank_rhat": 0.9978134349319219,
+            "folded_rhat": 1.0060171862296636,
+            "ess_bulk": 682.4459513548233,
+            "ess_tail": 509.53705744337003,
+            "ess_mean": 680.0542924173344,
+            "mcse_mean": 0.03828904770190071,
+            "name": "position[1]",
+            "status": "assessed",
+            "message": "no disagreement detected; unseen modes remain possible"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "710c1fcbd909df014ae048b11492a3b31a3f295c5522680568d0201de9aaa93b",
+      "initial_positions": [
+        [
+          -3.775454096385678,
+          -0.21830586638095775
+        ],
+        [
+          -3.7766759623372614,
+          -0.12691571444748403
+        ],
+        [
+          -4.109714030797947,
+          0.08873353701884931
+        ],
+        [
+          -3.6244693406227917,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 152322048,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        -4.015107504706877,
+        0.01814801762511765
+      ],
+      "covariance": [
+        [
+          0.21969048127858942,
+          -0.00038505747505312814
+        ],
+        [
+          -0.00038505747505312814,
+          0.9969943937266988
+        ]
+      ],
+      "quantiles": [
+        [
+          -4.784780215770752,
+          -1.545354999606162
+        ],
+        [
+          -4.029984063086932,
+          0.014367311295589899
+        ],
+        [
+          -3.2623913203719987,
+          1.6365902388406337
+        ]
+      ],
+      "absolute_mean_error": [
+        2.4151075047068766,
+        0.01814801762511765
+      ],
+      "mode_occupancy": [
+        {
+          "chain": 0,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 1,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 2,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 3,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        }
+      ],
+      "raw_artifact": "reports/raw/10-mixture-nuts.json.gz",
+      "raw_sha256": "56987bf5279d3c3c402f50d6dc570332accc61eb353f558f91004030732d0d77"
+    },
+    {
+      "preset": "mixture",
+      "config": {},
+      "algorithm": "nuts",
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 9,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1358.4128863609217,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 2.7461346939962823,
+        "gradient_evaluations": 10001,
+        "mean_acceptance": 0.849008053975576
+      },
+      "end_to_end_seconds": 2.830149834000622,
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          2
+        ],
+        "parameters": [
+          {
+            "mean": 0.0011508456763736775,
+            "sd": 4.050908722715278,
+            "q05": -4.600095895886677,
+            "q50": -0.010677970322289898,
+            "q95": 4.685556933218487,
+            "rhat": 1.7313832081729017,
+            "rank_rhat": 1.7313832081729017,
+            "folded_rhat": 0.9962595945368189,
+            "ess_bulk": 6.439783082702995,
+            "ess_tail": 281.10496108319285,
+            "ess_mean": 4.224379899240535,
+            "mcse_mean": 1.9709289732297952,
+            "name": "position[0]",
+            "status": "unreliable",
+            "message": "chains disagree"
+          },
+          {
+            "mean": -0.038070269758239086,
+            "sd": 1.0169138867639893,
+            "q05": -1.6927930275500274,
+            "q50": -0.0059587761039681195,
+            "q95": 1.6263025252827632,
+            "rhat": 1.0062085864118293,
+            "rank_rhat": 1.0030187601560763,
+            "folded_rhat": 1.0062085864118293,
+            "ess_bulk": 729.8034007252094,
+            "ess_tail": 389.44181614732156,
+            "ess_mean": 733.527538317093,
+            "mcse_mean": 0.03754706258491557,
+            "name": "position[1]",
+            "status": "preliminary",
+            "message": "limited effective draws; estimates are preliminary"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "710c1fcbd909df014ae048b11492a3b31a3f295c5522680568d0201de9aaa93b",
+      "initial_positions": [
+        [
+          -3.775454096385678,
+          -0.21830586638095775
+        ],
+        [
+          4.223324037662739,
+          -0.12691571444748403
+        ],
+        [
+          -4.109714030797947,
+          0.08873353701884931
+        ],
+        [
+          4.375530659377208,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 152322048,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "mean": [
+        0.0011508456763746578,
+        -0.03807026975823906
+      ],
+      "covariance": [
+        [
+          16.40986147977072,
+          -0.26980584632406807
+        ],
+        [
+          -0.26980584632406807,
+          1.0341138530934433
+        ]
+      ],
+      "quantiles": [
+        [
+          -4.600095895886677,
+          -1.6927930275500274
+        ],
+        [
+          -0.010677970322289898,
+          -0.0059587761039681195
+        ],
+        [
+          4.685556933218487,
+          1.6263025252827632
+        ]
+      ],
+      "absolute_mean_error": [
+        1.6011508456763748,
+        0.03807026975823906
+      ],
+      "mode_occupancy": [
+        {
+          "chain": 0,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 1,
+          "left_fraction": 0.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 2,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 3,
+          "left_fraction": 0.0,
+          "region_transitions": 0,
+          "draws": 200
+        }
+      ],
+      "raw_artifact": "reports/raw/11-mixture-nuts.json.gz",
+      "raw_sha256": "3a44fb354ffeb9ead3920cadf3e3de0fb6ba1a45974bc85395f2c63f9490ac0a"
+    },
+    {
+      "preset": "mixture",
+      "config": {},
+      "algorithm": "vi",
+      "settings": {
+        "algorithm": "vi",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.15,
+        "steps": 10,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 500000
+      },
+      "dimension": 2,
+      "observations": 0,
+      "environment": {
+        "engine": "0.1.0",
+        "python": "3.14.3",
+        "numpy": "2.4.2",
+        "scipy": "1.17.1",
+        "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "machine": "arm64",
+        "rng": "NumPy PCG64",
+        "float": "float64"
+      },
+      "status": "complete",
+      "reason": null,
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0.0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 9.831650682841428,
+        "gradient_evaluations": 42240,
+        "mean_acceptance": 0.0
+      },
+      "end_to_end_seconds": 9.881733666996297,
+      "diagnostics": {
+        "status": "not applicable",
+        "message": "R-hat and MCMC ESS do not apply to variational draws. Each fit is reported separately.",
+        "parameters": [],
+        "fits": [
+          {
+            "run": 0,
+            "mean": [
+              -3.950401911384086,
+              0.07364461834493792
+            ],
+            "sd": [
+              0.4733809425933956,
+              0.9915215274585069
+            ],
+            "q05": [
+              -4.7335662545331045,
+              -1.5470855706045838
+            ],
+            "q95": [
+              -3.167218388487494,
+              1.6118208474862774
+            ]
+          },
+          {
+            "run": 1,
+            "mean": [
+              4.01991598156452,
+              -0.12215510611946198
+            ],
+            "sd": [
+              0.5069421976007757,
+              1.015844292216848
+            ],
+            "q05": [
+              3.156712188926123,
+              -1.6688738084231598
+            ],
+            "q95": [
+              4.793913625319046,
+              1.4890379362282267
+            ]
+          },
+          {
+            "run": 2,
+            "mean": [
+              -4.018187311064814,
+              0.07036702483087387
+            ],
+            "sd": [
+              0.5520894788344959,
+              1.0473025600101864
+            ],
+            "q05": [
+              -4.87301961762401,
+              -1.5265958586049864
+            ],
+            "q95": [
+              -3.1931709070299177,
+              1.8440585462124262
+            ]
+          },
+          {
+            "run": 3,
+            "mean": [
+              3.9321883233382464,
+              0.044732922645582034
+            ],
+            "sd": [
+              0.4250059676663166,
+              0.9881264133028875
+            ],
+            "q05": [
+              3.2403321367388416,
+              -1.515104376024772
+            ],
+            "q95": [
+              4.558842333796938,
+              1.652533627303129
+            ]
+          }
+        ]
+      },
+      "model_hash": "710c1fcbd909df014ae048b11492a3b31a3f295c5522680568d0201de9aaa93b",
+      "initial_positions": [
+        [
+          -3.775454096385678,
+          -0.21830586638095775
+        ],
+        [
+          4.223324037662739,
+          -0.12691571444748403
+        ],
+        [
+          -4.109714030797947,
+          0.08873353701884931
+        ],
+        [
+          4.375530659377208,
+          -0.2429037949346718
+        ]
+      ],
+      "peak_process_rss_bytes": 152322048,
+      "source_hashes": {
+        "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
+        "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
+        "autodiff.py": "ae76a77960ef8fcaca4b7f876154e0524f8fc4e91a27750dc6a089230689ae08",
+        "bridge.py": "63e7a32eeb767ec65009f75919536450153e54455ed62e7df4d772d470e6a132",
+        "cli.py": "b13e12c14e968321a547683df40a8d9be46953638f72ea931c787cd07bebe19f",
+        "diagnostics.py": "d15934a3bcf9f20cdb83c7275b4996b5a676cc677c7f11ff9d493b7ad5ccf30a",
+        "distributions.py": "aadf4e2facbc1682e903d9eb7cd76feffa296094701243d2fa2cf9fd942a2c97",
+        "examples.py": "04805ae24c37217de8b7b1b75670686860a66f06126a2a0ccfdc8e0e720c7670",
+        "models.py": "8e96637dd7b4aea05cdf93b1b57746036221fc6f2d9bc965bca29240109f828b",
+        "prediction.py": "65b6b98e90a069250c77f85ac7c2f54b751cf564f3a50cbacf0772607dd67889",
+        "runtime.py": "3b193c553977356cea0706d6d4adebcc98ed4db36a08f16e5879770af7d14b04",
+        "samplers.py": "c2b53745d0a9a2ac4ae4a067a26b72e781db6362bda61332b725f52cc57ae1db",
+        "serialization.py": "de20e59c8bd5da6ab9c0c540cf9236086e3e01043b1bdb5384bed0f2707a8f29",
+        "transforms.py": "3b5e90cf3f09a6ecc397c8bfe26a33d09270ef0165f91b8333eaab53475dbcee",
+        "variational.py": "01e55abb547ff0a69d0d8432f15e03951c2060792a2c8efa0fa88780bec9d46d"
+      },
+      "fits": [
+        {
+          "run": 0,
+          "mu": [
+            -3.9651774808866014,
+            0.05387780264032509
+          ],
+          "unconstrained_variance": [
+            0.24829888783700355,
+            0.9398817722397725
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -0.3030694437940289,
+            "mcse": 0.08183210393903503,
+            "n": 128
+          }
+        },
+        {
+          "run": 1,
+          "mu": [
+            4.012953329024474,
+            -0.04986443919070448
+          ],
+          "unconstrained_variance": [
+            0.25041579354731486,
+            1.0669351022817029
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -1.210107528840358,
+            "mcse": 0.08939272363979438,
+            "n": 128
+          }
+        },
+        {
+          "run": 2,
+          "mu": [
+            -4.0133917145878755,
+            0.07439955429490845
+          ],
+          "unconstrained_variance": [
+            0.2795102847629883,
+            1.1183535609262123
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -0.4513725429648332,
+            "mcse": 0.10113944163824161,
+            "n": 128
+          }
+        },
+        {
+          "run": 3,
+          "mu": [
+            3.912963068598992,
+            -0.06520649179099107
+          ],
+          "unconstrained_variance": [
+            0.20767767101987542,
+            1.0727842277206585
+          ],
+          "last_independent_elbo": {
+            "iteration": 1000,
+            "elbo": -1.341069696516291,
+            "mcse": 0.0807850651944808,
+            "n": 128
+          }
+        }
+      ],
+      "mode_occupancy": [
+        {
+          "chain": 0,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 1,
+          "left_fraction": 0.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 2,
+          "left_fraction": 1.0,
+          "region_transitions": 0,
+          "draws": 200
+        },
+        {
+          "chain": 3,
+          "left_fraction": 0.0,
+          "region_transitions": 0,
+          "draws": 200
+        }
+      ],
+      "raw_artifact": "reports/raw/12-mixture-vi.json.gz",
+      "raw_sha256": "80dc536b6d7810145da341272d17846a1ac2513b1a72f26616625c336ec459f4"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "verified_at_utc": "2026-10-13T21:01:21.860546+00:00",
+  "repository": {
+    "default_branch": "main",
+    "full_name": "DhanushKrishna4/Posterior",
+    "homepage": "https://dhanushkrishna4.github.io/Posterior/",
+    "html_url": "https://github.com/DhanushKrishna4/Posterior",
+    "private": false
+  },
+  "pages": {
+    "build_type": "workflow",
+    "html_url": "https://dhanushkrishna4.github.io/Posterior/",
+    "https_enforced": true,
+    "status": null
+  },
+  "deployment_workflow": {
+    "conclusion": "success",
+    "databaseId": 38466427680,
+    "event": "workflow_dispatch",
+    "headSha": "514e91e0e492d8b5c1f6981fc31d7ffab524f986",
+    "status": "completed",
+    "url": "https://github.com/DhanushKrishna4/Posterior/actions/runs/38466427680"
+  },
+  "ci": {
+    "native_tests_passed": 178,
+    "native_test_seconds": 123.41,
+    "browser_checks_passed": 18,
+    "browser_checks_failed": 0
+  },
+  "hosted_browser": {
+    "report": "reports/hosted/report.json",
+    "passed": 18,
+    "failed": 0
+  },
+  "hosted_asset_evidence": "reports/hosted-assets.json",
+  "authorship": {
+    "authors": [
+      "DhanushKrishna4"
+    ],
+    "committers": [
+      "DhanushKrishna4"
+    ],
+    "coauthor_trailers": false,
+    "verified_commits": [
+      {
+        "author": "DhanushKrishna4",
+        "committer": "DhanushKrishna4",
+        "message": "Check preview readiness over HTTP in browser verification",
+        "sha": "514e91e0e492d8b5c1f6981fc31d7ffab524f986"
+      },
+      {
+        "author": "DhanushKrishna4",
+        "committer": "DhanushKrishna4",
+        "message": "Build Posterior inference engine and interactive workbench",
+        "sha": "8453ce43d9da1140942b546b35a247b2f6aa6b18"
+      }
+    ],
+    "contributors": [
+      {
+        "contributions": 1,
+        "login": "DhanushKrishna4",
+        "type": "User"
+      }
+    ]
+  },
+  "limits": [
+    "Hosted browser checks ran in Chromium on macOS. Safari, Firefox, physical touch and background-tab behavior remain unverified.",
+    "Contributor counts may lag GitHub commit data; the displayed contributor identity was checked separately."
+  ]
+}

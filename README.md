@@ -134,6 +134,8 @@ The build itself runs no research benchmark. Browser checks launch the productio
 
 The complete deployable artifact is `dist/`. Pyodide 0.27.7, NumPy 2.0.2, SciPy 1.14.1, and OpenBLAS assets are self-hosted and hash-checked against `scripts/runtime-lock.json`. The selected runtime assets total about 34.8 MiB; no complete scientific distribution or native reference package is shipped. The Python source ZIP has sorted entries, stable timestamps, and stable permissions.
 
+The public [Pages workbench](https://dhanushkrishna4.github.io/Posterior/) is deployed and verified. GitHub Actions passed 178 Python tests and 18 browser checks; the hosted site separately passed all 18 browser checks. See [deployment evidence](reports/deployment.json) and [hosted results](reports/hosted/report.json).
+
 The GitHub Actions workflow checks Python, builds, tests the production browser, and prepares a Pages artifact. Publishing is an **explicit manual workflow dispatch** with `deploy: true` after configuring Pages to use GitHub Actions. Push/PR checks do not publish. Repository name/path changes require updating `base` in `vite.config.js` and rerunning subpath checks.
 
 ## Architecture

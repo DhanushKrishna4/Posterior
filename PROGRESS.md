@@ -1,8 +1,9 @@
 # Posterior implementation and verification
 
 Local implementation delivered 2026-10-12. The initial workspace was empty.
-Public release was authorized on 2026-10-13. The project is now a Git checkout;
-GitHub repository creation and hosted verification are in progress.
+Public release was authorized on 2026-10-13 and verified on 2026-10-14.
+The public repository is [DhanushKrishna4/Posterior](https://github.com/DhanushKrishna4/Posterior),
+with the [live workbench](https://dhanushkrishna4.github.io/Posterior/) hosted on GitHub Pages.
 
 ## Implemented milestones
 
@@ -61,7 +62,7 @@ See [the evaluation report](reports/README.md),
 - Saved separated-mixture runs make no mode crossings. Equal pooling of trapped chains does not recover 70:30 weights. Independent VI fits stay separate.
 - At Gaussian correlation 0.95, optimal mean-field variances are 0.0975 while true marginal variances are 1. Accurate optimization can still understate uncertainty.
 - Safari, Firefox, physical touch, background-tab behavior and browser heap growth are unverified. Cross-runtime primitive parity is tested; identical full chains across builds are not promised.
-- Hosted GitHub Pages and remote CI have not run. The static artifact and explicit manual-deployment workflow are prepared and locally verified.
+- GitHub Actions passed all 178 Python tests and 18 browser checks, and deployed successfully. The hosted Pages app separately passed 18/18 browser checks. See [deployment evidence](reports/deployment.json) and [hosted checks](reports/hosted/report.json).
 
 ## Reproduction commands
 

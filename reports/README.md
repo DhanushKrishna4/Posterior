@@ -6,6 +6,9 @@ These artifacts contain actual CPU computations, including unsuccessful explorat
 
 | Artifact | What it records |
 | --- | --- |
+| [deployment.json](deployment.json) | Public repository, successful Pages workflow, CI results and verified authorship |
+| [hosted/report.json](hosted/report.json) | All 18 browser checks executed against the live Pages site |
+| [hosted-assets.json](hosted-assets.json) | Hosted application and Python-engine bytes compared with the verified local build |
 | [hardware.json](hardware.json) | Apple M3, 8 GiB RAM, arm64; local CPU |
 | [native-pilot.json](native-pilot.json) | Measured small Beta–Binomial pilot before the native evaluation |
 | [native-evaluation.json](native-evaluation.json) | Twelve actual preset outcomes, settings, costs, diagnostics, model/source hashes and raw-artifact hashes |
@@ -84,6 +87,8 @@ A documented follow-up changes only the HMC integration count to seven at the sa
 [The browser report](browser/report.json) verifies the actual static application over HTTP under the case-sensitive `/Posterior/` subpath. It records cold loading, native/Pyodide primitive parity, short NUTS/VI execution for every preset, persistence, pause/resume, cancellation/recovery, stale responses, CSV validation, trajectory replay, exports, responsive layout and runtime-loading errors. The final run passes **18/18 checks**; read each check's status and the final summary; successful short execution is not a statistical accuracy test.
 
 The recorded default browser Beta pilot retains **800 draws** after 800 warmup transitions, takes approximately **15.60 seconds including the UI**, and uses **7,707 gradient evaluations**. Its posterior mean **0.643576** is close to the exact mean, but R-hat **1.0227** explicitly reports chain disagreement. Native/Pyodide log-density and gradient parity uses absolute tolerance **1e−9** and relative tolerance **1e−10**; this does not promise identical full stochastic trajectories across numerical backends.
+
+The public deployment separately passed **18/18 hosted browser checks**. GitHub Actions passed **178 Python tests** and **18 browser checks** before deployment. These are recorded in [deployment.json](deployment.json), with live-site observations in [hosted/report.json](hosted/report.json).
 
 ## Reproduction and raw data
 

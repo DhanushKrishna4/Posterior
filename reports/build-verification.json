@@ -28,7 +28,7 @@
     }
   ],
   "production_files": 15,
-  "production_bytes": 36626498,
+  "production_bytes": 36650796,
   "source_sha256": {
     "__init__.py": "a58b3dc7da245604b5676a15e89a6b2e3c381f84a18409a0d8fc0624e047e9fe",
     "adaptation.py": "296e8ff780bb97d655f7b8fe633a24abd1c3e29087f69129a8549cd254693397",
@@ -48,11 +48,11 @@
   },
   "production_sha256": {
     "assets/favicon-Bj9IRiH4.svg": "9bd811196a2a5f8173be41328b30d14159ce9eb2366d1cf3b0b66db5125596eb",
-    "assets/index-BPYi_8pW.css": "9111d0eb9eb33c67dbd724e3fff799fe98cc0e887a14d7f5d4f7409af37d938d",
-    "assets/index-BnDar_E8.js": "f792d1a7b3377c9f9dd70638e9334768eb05a5da33148f47b66741c9232bd188",
+    "assets/index-CQUCsQ-p.css": "706038942f80522e683bbbfa27cc679333efb329833e70271d10d2ab76036366",
+    "assets/index-FcLRkaOS.js": "fb30defd94e2de4165311864be683fff2161e1baa4d860a1ee045d2ca5d79f4c",
     "assets/worker-oo-vOJ7-.js": "144d1fe44e9df66da2fd798ea012af8ad602c2f06eda1ad5f20a15c024cad9c8",
     "engine/posterior_lab.zip": "313ab49f3388652715687eb560310d80b783f7dfb2beb4cbd5a57a3c988f06b7",
-    "index.html": "9508dbce6e6db6d6c37c3c6814760a1fc72e7bc2b4d0523c81125abc856f2317",
+    "index.html": "224dc5ad7199831fcaa8cf151846c906084b52fc83e6b3d7e72b6e5ea0ec1068",
     "runtime/manifest.json": "a15d848a47691189dcf37cd99d264e4d2be55aec756e4cae6fdf739fa4e85f55",
     "runtime/numpy-2.0.2-cp312-cp312-pyodide_2024_0_wasm32.whl": "ebb61241d962b98b21597d7ce43b67668a6d5bab3acec4fbe958657320d7cd08",
     "runtime/openblas-0.3.26.zip": "787ea9a8a5cd160204388d03324b3b7ce5c9aea14b5680cec987f837e76c5198",

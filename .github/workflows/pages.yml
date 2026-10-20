@@ -37,11 +37,16 @@ jobs:
       - run: npm run test:browser
         env:
           PYTHON: python
+      - run: npm run test:redesign
+        env:
+          POSTERIOR_REPORT_DIR: reports/redesign/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: verification
-          path: reports/browser/
+          path: |
+            reports/browser/
+            reports/redesign/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

@@ -1,0 +1,806 @@
+{
+  "schema": 1,
+  "timestamp": "2026-10-20T08:32:09.259Z",
+  "url": "http://127.0.0.1:4179/Posterior/",
+  "environment": {
+    "node": "v26.4.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "chromium": "151.0.7922.34"
+  },
+  "screenshot_convention": "Viewport size, full-page/viewport scope and scroll position are recorded for each capture. Full-page captures start at the top. Inference screenshots contain real worker results.",
+  "checks": [
+    {
+      "name": "Runtime, document identity and initial responsive composition",
+      "status": "passed",
+      "seconds": 4.97887325,
+      "details": {
+        "document": {
+          "duplicate_ids": [],
+          "empty_ids": [],
+          "broken_label_targets": [],
+          "model_count": 5,
+          "runtime": "Python ready · computation stays on this device",
+          "figure": "Experiment 01"
+        },
+        "widths": [
+          1440,
+          1280,
+          768,
+          390
+        ],
+        "primary_action_visible": {
+          "desktop": true,
+          "mobile": true
+        }
+      }
+    },
+    {
+      "name": "Keyboard figure inspection displays plotted values and dismisses",
+      "status": "passed",
+      "seconds": 0.2341809579999999,
+      "details": {
+        "content": "Nearest plotted valuesPrior density: 1.4997 · x 0.5075Scaled likelihood: 1.4443 · x 0.5075Exact posterior density: 1.6662 · x 0.5075",
+        "tooltip_within_viewport": true,
+        "escape_dismissed": true
+      }
+    },
+    {
+      "name": "Guide keyboard activation, dialog focus and focus restoration",
+      "status": "passed",
+      "seconds": 0.3675914159999993,
+      "details": {
+        "opened_with": "Enter",
+        "closed_with": "Escape",
+        "focus_returned_to": "help-button"
+      }
+    },
+    {
+      "name": "Default real Beta NUTS result and matching desktop/mobile evidence",
+      "status": "passed",
+      "seconds": 17.158139375,
+      "details": {
+        "retained": 800,
+        "settings": {
+          "algorithm": "nuts",
+          "chains": 4,
+          "warmup": 200,
+          "draws": 200,
+          "seed": 42,
+          "step_size": 0.2,
+          "steps": 15,
+          "max_depth": 7,
+          "target_accept": 0.8,
+          "iterations": 1000,
+          "batch_size": 8,
+          "learning_rate": 0.03,
+          "initialization": "dispersed",
+          "max_seconds": 120,
+          "max_gradient_evaluations": 100000
+        },
+        "diagnostic_status": "unreliable"
+      }
+    },
+    {
+      "name": "Trajectory and diagnostic navigation expose correct selected state",
+      "status": "passed",
+      "seconds": 0.6996138339999998,
+      "details": {
+        "main_view": "trajectory",
+        "diagnostic_view": "transition",
+        "recorded_transitions": 16,
+        "reduced_motion_replay": {
+          "visible_positions": 4,
+          "total_positions": 4
+        }
+      }
+    },
+    {
+      "name": "Parameter edits recompute the independent reference and clear old draws",
+      "status": "passed",
+      "seconds": 0.13156879100000152,
+      "details": {
+        "before": 0.6428571428571429,
+        "after": 0.7142857142857143,
+        "analytic_expected": 0.7142857142857143,
+        "old_draws_cleared": true,
+        "old_transition_metadata_cleared": true,
+        "diagnostic_status_reset": true
+      }
+    },
+    {
+      "name": "Advanced model editor and resource controls remain accessible",
+      "status": "passed",
+      "seconds": 0.547843667000001,
+      "details": {
+        "editor_model": "beta",
+        "resource_budget_controls": true
+      }
+    },
+    {
+      "name": "Regression real computation and analytic predictive bands",
+      "status": "passed",
+      "seconds": 1.8687734999999994,
+      "details": {
+        "retained": 120,
+        "reference": {
+          "mean": 100,
+          "predictive": 100
+        },
+        "interpretation": "Short execution run; no inference-quality claim."
+      }
+    },
+    {
+      "name": "Gaussian VI preserves separate fit summaries and objective view",
+      "status": "passed",
+      "seconds": 1.5958019590000003,
+      "details": {
+        "fits": 2,
+        "updates": 75,
+        "draws_per_fit": 60,
+        "mcmc_diagnostics": "not applicable",
+        "interpretation": "Short execution run; no inference-quality claim."
+      }
+    },
+    {
+      "name": "Reduced motion, mobile dialog and clean console/static requests",
+      "status": "passed",
+      "seconds": 0.009789042000000336,
+      "details": {
+        "reduced_motion_requested": true,
+        "page_errors": 0,
+        "console_errors": 0,
+        "failed_requests": 0
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "desktop-initial",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2686,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 420.15625,
+        "bottom": 469.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 577.1875,
+        "bottom": 907.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-first-viewport",
+      "width": 1440,
+      "height": 1000,
+      "full_page": false,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2685,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 419.15625,
+        "bottom": 468.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 576.1875,
+        "bottom": 906.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-1280-initial",
+      "width": 1280,
+      "height": 900,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1280,
+      "document_height": 2685,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 412.796875,
+        "bottom": 461.796875,
+        "left": 959,
+        "right": 1226
+      },
+      "main_plot": {
+        "top": 569.828125,
+        "bottom": 899.828125,
+        "width": 876,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "tablet-initial",
+      "width": 768,
+      "height": 1024,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 768,
+      "document_height": 3572,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 418.671875,
+        "bottom": 467.671875,
+        "left": 482,
+        "right": 714
+      },
+      "main_plot": {
+        "top": 608.703125,
+        "bottom": 958.703125,
+        "width": 674,
+        "height": 350
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "mobile-initial",
+      "width": 390,
+      "height": 844,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 390,
+      "document_height": 4572,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 491.890625,
+        "bottom": 536.890625,
+        "left": 37,
+        "right": 353
+      },
+      "main_plot": {
+        "top": 623.734375,
+        "bottom": 918.734375,
+        "width": 350,
+        "height": 295
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "mobile-first-viewport",
+      "width": 390,
+      "height": 844,
+      "full_page": false,
+      "scroll_target": null,
+      "document_width": 390,
+      "document_height": 4572,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 491.890625,
+        "bottom": 536.890625,
+        "left": 37,
+        "right": 353
+      },
+      "main_plot": {
+        "top": 623.734375,
+        "bottom": 918.734375,
+        "width": 350,
+        "height": 295
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-guide",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2685,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 419.15625,
+        "bottom": 468.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 576.1875,
+        "bottom": 906.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-result",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2685,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 419.15625,
+        "bottom": 468.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 576.1875,
+        "bottom": 906.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-workspace-result",
+      "width": 1440,
+      "height": 1000,
+      "full_page": false,
+      "scroll_target": "#workbench",
+      "document_width": 1440,
+      "document_height": 2685,
+      "scroll_y": 358,
+      "run_button": {
+        "top": 61.15625,
+        "bottom": 110.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 218.1875,
+        "bottom": 548.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "mobile-result",
+      "width": 390,
+      "height": 844,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 390,
+      "document_height": 4652,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 491.890625,
+        "bottom": 536.890625,
+        "left": 37,
+        "right": 353
+      },
+      "main_plot": {
+        "top": 663.734375,
+        "bottom": 958.734375,
+        "width": 350,
+        "height": 295
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-secondary",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2731,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 419.15625,
+        "bottom": 468.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 653.1875,
+        "bottom": 983.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-advanced",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 3368,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 491.953125,
+        "bottom": 540.953125,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 648.984375,
+        "bottom": 978.984375,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-regression",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2710,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 419.15625,
+        "bottom": 468.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 576.1875,
+        "bottom": 906.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "desktop-variational",
+      "width": 1440,
+      "height": 1000,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 1440,
+      "document_height": 2762,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 419.15625,
+        "bottom": 468.15625,
+        "left": 1076,
+        "right": 1367
+      },
+      "main_plot": {
+        "top": 576.1875,
+        "bottom": 906.1875,
+        "width": 974,
+        "height": 330
+      },
+      "primary_action_within_viewport": true
+    },
+    {
+      "name": "mobile-variational",
+      "width": 390,
+      "height": 844,
+      "full_page": true,
+      "scroll_target": null,
+      "document_width": 390,
+      "document_height": 4766,
+      "scroll_y": 0,
+      "run_button": {
+        "top": 520.640625,
+        "bottom": 565.640625,
+        "left": 37,
+        "right": 353
+      },
+      "main_plot": {
+        "top": 692.484375,
+        "bottom": 987.484375,
+        "width": 350,
+        "height": 295
+      },
+      "primary_action_within_viewport": true
+    }
+  ],
+  "runs": [
+    {
+      "label": "Default Beta NUTS",
+      "status": "complete",
+      "reason": null,
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 4,
+        "warmup": 200,
+        "draws": 200,
+        "seed": 42,
+        "step_size": 0.2,
+        "steps": 15,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 100000
+      },
+      "progress": {
+        "completed": 1600,
+        "total": 1600,
+        "warmup_completed": 800,
+        "retained": 800,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 1371.8335613819515,
+        "transitions": 1600,
+        "retained_transitions": 800,
+        "elapsed_seconds": 15.068200002000005,
+        "gradient_evaluations": 7707,
+        "mean_acceptance": 0.8573959758637197
+      },
+      "diagnostics": {
+        "status": "unreliable",
+        "message": "chains disagree",
+        "shape": [
+          4,
+          200,
+          1
+        ],
+        "parameters": [
+          {
+            "mean": 0.6435764063707995,
+            "sd": 0.1255280203456304,
+            "q05": 0.4290647108635277,
+            "q50": 0.653419367389648,
+            "q95": 0.8321016565545482,
+            "rhat": 1.0226569471820113,
+            "rank_rhat": 1.0080109645549993,
+            "folded_rhat": 1.0226569471820113,
+            "ess_bulk": 353.776566968033,
+            "ess_tail": 241.2569358500462,
+            "ess_mean": 363.06960246501626,
+            "mcse_mean": 0.006587880836777175,
+            "name": "probability",
+            "status": "unreliable",
+            "message": "chains disagree"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 800
+      },
+      "model_hash": "cd9652be333fa0dfe7d3abddd535de41e26624fc262e076ef5723c4e612bc4cc",
+      "retained_per_chain": [
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "label": "Regression NUTS visual verification",
+      "status": "complete",
+      "reason": null,
+      "settings": {
+        "algorithm": "nuts",
+        "chains": 2,
+        "warmup": 25,
+        "draws": 60,
+        "seed": 42,
+        "step_size": 0.2,
+        "steps": 15,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 1000,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 100000
+      },
+      "progress": {
+        "completed": 170,
+        "total": 170,
+        "warmup_completed": 50,
+        "retained": 120,
+        "chain": 0,
+        "phase": "sampling"
+      },
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 4,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 150.41386082820506,
+        "transitions": 170,
+        "retained_transitions": 120,
+        "elapsed_seconds": 0.7201000010000023,
+        "gradient_evaluations": 1130,
+        "mean_acceptance": 0.8847874166365004
+      },
+      "diagnostics": {
+        "status": "preliminary",
+        "message": "limited effective draws; estimates are preliminary",
+        "shape": [
+          2,
+          60,
+          2
+        ],
+        "parameters": [
+          {
+            "mean": 0.6946128603810103,
+            "sd": 0.11626140434853173,
+            "q05": 0.5359328098722376,
+            "q50": 0.6812567963196697,
+            "q95": 0.8992652133064198,
+            "rhat": 1.0099406354345364,
+            "rank_rhat": 0.985834655157448,
+            "folded_rhat": 1.0099406354345364,
+            "ess_bulk": 102.5940894076613,
+            "ess_tail": 76.35622971451284,
+            "ess_mean": 101.18561520224809,
+            "mcse_mean": 0.011557826647979302,
+            "name": "coefficient[0]",
+            "status": "preliminary",
+            "message": "limited effective draws; estimates are preliminary"
+          },
+          {
+            "mean": 1.303008396974525,
+            "sd": 0.1186350550577035,
+            "q05": 1.1062741424194225,
+            "q50": 1.3010274352805937,
+            "q95": 1.5043481141501862,
+            "rhat": 0.9947217051106864,
+            "rank_rhat": 0.990616713153673,
+            "folded_rhat": 0.9947217051106864,
+            "ess_bulk": 146.00861389478297,
+            "ess_tail": 75.04746044962533,
+            "ess_mean": 139.42317653214022,
+            "mcse_mean": 0.010047211616163707,
+            "name": "coefficient[1]",
+            "status": "preliminary",
+            "message": "limited effective draws; estimates are preliminary"
+          }
+        ],
+        "definitions": {
+          "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+          "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+          "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+          "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+          "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+          "rhat": "Maximum of rank_rhat and folded_rhat",
+          "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+          "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+          "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+          "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+          "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+          "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+          "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+        },
+        "as_of_retained": 120
+      },
+      "model_hash": "14a6bef695004f4fbef61208ad85c18e4967c068a562a6d81dc592c3a2954e28",
+      "retained_per_chain": [
+        60,
+        60
+      ]
+    },
+    {
+      "label": "Gaussian VI visual verification",
+      "status": "complete",
+      "reason": null,
+      "settings": {
+        "algorithm": "vi",
+        "chains": 2,
+        "warmup": 25,
+        "draws": 60,
+        "seed": 42,
+        "step_size": 0.2,
+        "steps": 15,
+        "max_depth": 7,
+        "target_accept": 0.8,
+        "iterations": 75,
+        "batch_size": 8,
+        "learning_rate": 0.03,
+        "initialization": "dispersed",
+        "max_seconds": 120,
+        "max_gradient_evaluations": 100000
+      },
+      "progress": {
+        "completed": 150,
+        "total": 150,
+        "warmup_completed": 0,
+        "retained": 120,
+        "chain": 0,
+        "phase": "variational optimization"
+      },
+      "stats": {
+        "divergences": 0,
+        "warmup_divergences": 0,
+        "max_depth_events": 0,
+        "warmup_max_depth_events": 0,
+        "acceptance_sum": 0,
+        "transitions": 0,
+        "retained_transitions": 0,
+        "elapsed_seconds": 0.46540000100000256,
+        "gradient_evaluations": 1712,
+        "mean_acceptance": 0
+      },
+      "diagnostics": {
+        "status": "not applicable",
+        "message": "R-hat and MCMC ESS do not apply to variational draws. Each fit is reported separately.",
+        "parameters": [],
+        "fits": [
+          {
+            "run": 0,
+            "mean": [
+              0.057818505881067225,
+              0.08526842012626203
+            ],
+            "sd": [
+              0.35432511760048846,
+              0.3470819179740377
+            ],
+            "q05": [
+              -0.43968455991295563,
+              -0.5146630065583752
+            ],
+            "q95": [
+              0.6285760029861296,
+              0.6159935155066205
+            ]
+          },
+          {
+            "run": 1,
+            "mean": [
+              -0.075118907367901,
+              -0.12970982860868313
+            ],
+            "sd": [
+              0.3215823161188815,
+              0.38736790099548
+            ],
+            "q05": [
+              -0.5659477373622757,
+              -0.6966728454012079
+            ],
+            "q95": [
+              0.32975660077228136,
+              0.43803866327382535
+            ]
+          }
+        ]
+      },
+      "model_hash": "a28cc787677ef835067ebb8a5136243223fe7951229bf1443898123720bcc166",
+      "retained_per_chain": [
+        60,
+        60
+      ]
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "failed_requests": [],
+  "summary": {
+    "passed": 10,
+    "failed": 0
+  }
+}

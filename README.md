@@ -25,6 +25,8 @@ Choose a model, inspect its assumptions, run an algorithm, and compare with the 
 
 The interface provides an advanced JSON model editor, regression CSV import with explicit columns, trace/rank/objective plots, selected-transition replay, diagnostics, local saved experiments with deletion, JSON and CSV exports, and PNG plot export. Independent VI fits have separate summaries; they are never pooled into MCMC convergence diagnostics.
 
+The workbench uses a probability-atlas layout: five question-led experiments, a large inspectable distribution, a dedicated experiment panel, and a separate evidence section. Plot inspection supports pointer, touch, and keyboard arrows. Exact Beta reference intervals are shaded explicitly; sampled fits remain separate. See the [redesign review and before/after captures](docs/redesign/README.md).
+
 ## Native Python
 
 Python 3.12 reproduces the pinned CI and browser dependency versions. Python 3.14 also works with compatible native NumPy/SciPy versions, recorded in the evaluation artifacts.
@@ -123,6 +125,7 @@ The available machine was verified as **Apple M3 with 8 GiB RAM**. Four-chain Be
 .venv/bin/python scripts/evaluate.py
 npm run build
 npm run test:browser
+npm run test:redesign
 .venv/bin/python scripts/verify_build.py
 ```
 

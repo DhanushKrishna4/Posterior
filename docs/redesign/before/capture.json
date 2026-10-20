@@ -1,0 +1,134 @@
+{
+  "timestamp": "2026-10-19T16:13:27.823Z",
+  "viewport": "full page captures with matching viewport sizes",
+  "browser": "151.0.7922.34",
+  "run": {
+    "status": "complete",
+    "settings": {
+      "algorithm": "nuts",
+      "chains": 4,
+      "warmup": 200,
+      "draws": 200,
+      "seed": 42,
+      "step_size": 0.2,
+      "steps": 15,
+      "max_depth": 7,
+      "target_accept": 0.8,
+      "iterations": 1000,
+      "batch_size": 8,
+      "learning_rate": 0.03,
+      "initialization": "dispersed",
+      "max_seconds": 120,
+      "max_gradient_evaluations": 100000
+    },
+    "progress": {
+      "completed": 1600,
+      "total": 1600,
+      "warmup_completed": 800,
+      "retained": 800,
+      "chain": 0,
+      "phase": "sampling"
+    },
+    "diagnostics": {
+      "status": "unreliable",
+      "message": "chains disagree",
+      "shape": [
+        4,
+        200,
+        1
+      ],
+      "parameters": [
+        {
+          "mean": 0.6435764063707995,
+          "sd": 0.1255280203456304,
+          "q05": 0.4290647108635277,
+          "q50": 0.653419367389648,
+          "q95": 0.8321016565545482,
+          "rhat": 1.0226569471820113,
+          "rank_rhat": 1.0080109645549993,
+          "folded_rhat": 1.0226569471820113,
+          "ess_bulk": 353.776566968033,
+          "ess_tail": 241.2569358500462,
+          "ess_mean": 363.06960246501626,
+          "mcse_mean": 0.006587880836777175,
+          "name": "probability",
+          "status": "unreliable",
+          "message": "chains disagree"
+        }
+      ],
+      "definitions": {
+        "reference": "ArviZ 0.21.0 public rhat, ess and mcse functions; Vehtari et al. (2021)",
+        "shape": "chain, draw, parameter; retained post-warmup draws including rejections",
+        "split": "First and last floor(draws/2) draws; omit the middle draw when odd",
+        "rank_rhat": "Split R-hat of pooled average ranks transformed by Phi^-1((rank-3/8)/(N+1/4))",
+        "folded_rhat": "Rank-normalized split R-hat of absolute deviations from the pooled split median",
+        "rhat": "Maximum of rank_rhat and folded_rhat",
+        "ess_bulk": "Geyer initial positive/monotone sequence ESS of rank-normalized split chains",
+        "ess_tail": "Minimum split indicator ESS at pooled raw 5th and 95th percentiles",
+        "ess_mean": "Geyer initial positive/monotone sequence ESS of raw-scale split chains",
+        "mcse_mean": "Pooled raw sample standard deviation divided by sqrt(raw-scale ess_mean)",
+        "ess_bound": "Integrated autocorrelation lower bound 1/log10(N); ESS may exceed N",
+        "unavailable": "Nonfinite, any constant original chain, fewer than 2 chains or 4 draws",
+        "status": "R-hat >1.01: chains disagree; ESS <100 per chain or <50 draws: preliminary; no convergence proof"
+      },
+      "as_of_retained": 800
+    }
+  },
+  "metrics": [
+    {
+      "name": "desktop-initial",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "documentHeight": 1397,
+      "runButtonTop": 1174.6875,
+      "mainPlotTop": 290.1875
+    },
+    {
+      "name": "desktop-1280-initial",
+      "width": 1280,
+      "height": 900,
+      "documentWidth": 1280,
+      "documentHeight": 1397,
+      "runButtonTop": 1174.6875,
+      "mainPlotTop": 290.1875
+    },
+    {
+      "name": "tablet-initial",
+      "width": 768,
+      "height": 1024,
+      "documentWidth": 768,
+      "documentHeight": 1944,
+      "runButtonTop": 1250.1875,
+      "mainPlotTop": 282.1875
+    },
+    {
+      "name": "mobile-initial",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "documentHeight": 2993,
+      "runButtonTop": 1023.1875,
+      "mainPlotTop": 1248.96875
+    },
+    {
+      "name": "desktop-result",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "documentHeight": 1397,
+      "runButtonTop": 778.6875,
+      "mainPlotTop": -105.8125
+    },
+    {
+      "name": "desktop-secondary",
+      "width": 1440,
+      "height": 1000,
+      "documentWidth": 1440,
+      "documentHeight": 1397,
+      "runButtonTop": 1174.6875,
+      "mainPlotTop": 352.1875
+    }
+  ],
+  "errors": []
+}

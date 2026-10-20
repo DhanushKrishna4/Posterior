@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "timestamp": "2026-10-12T11:08:44.253Z",
+  "timestamp": "2026-10-20T08:29:30.889Z",
   "url": "http://127.0.0.1:4178/Posterior/",
   "environment": {
     "node": "v26.4.0",
@@ -12,7 +12,7 @@
     {
       "name": "Cold self-hosted Pyodide and package loading under /Posterior/",
       "status": "passed",
-      "seconds": 2.9473195829999996,
+      "seconds": 3.040515458,
       "details": {
         "runtime": "Pyodide 0.27.7; NumPy 2.0.2; SciPy 1.14.1",
         "network": "All browser asset requests use the local site origin."
@@ -21,7 +21,7 @@
     {
       "name": "Native / Pyodide log-density and gradient parity on all five presets",
       "status": "passed",
-      "seconds": 0.8911855000000005,
+      "seconds": 1.9210906249999997,
       "details": {
         "fixtures": 10,
         "absolute_tolerance": 1e-9,
@@ -32,7 +32,7 @@
     {
       "name": "Actual UI NUTS run, unavailable diagnostics, and retained samples",
       "status": "passed",
-      "seconds": 0.22321833400000013,
+      "seconds": 0.4662475409999997,
       "details": {
         "retained": 10,
         "status": "unreliable"
@@ -41,13 +41,13 @@
     {
       "name": "Measured default browser pilot: four chains, 200 warmup + 200 retained each",
       "status": "passed",
-      "seconds": 15.616709583000002,
+      "seconds": 15.944754833,
       "details": {
         "status": "complete",
         "completed": 1600,
         "retained": 800,
-        "wall_seconds_including_ui": 15.596927625000001,
-        "engine_active_seconds": 14.777400000000004,
+        "wall_seconds_including_ui": 15.9253825,
+        "engine_active_seconds": 14.872299995,
         "gradient_evaluations": 7707,
         "interpretation": "Measured runtime of a single seed; not a general throughput or convergence guarantee."
       }
@@ -55,7 +55,7 @@
     {
       "name": "Pause / resume is deterministic in the same pinned browser runtime",
       "status": "passed",
-      "seconds": 0.4168015419999974,
+      "seconds": 0.4411982089999983,
       "details": {
         "paused_after": 13,
         "completed": 40,
@@ -65,7 +65,7 @@
     {
       "name": "All five presets execute short NUTS and VI runs in Pyodide",
       "status": "passed",
-      "seconds": 2.80203875,
+      "seconds": 2.832657833000001,
       "details": {
         "runs": 10,
         "interpretation": "Execution checks only; 16 draws per chain do not establish inference quality."
@@ -74,25 +74,25 @@
     {
       "name": "UI pause and hard worker recovery preserve the last completed checkpoint",
       "status": "passed",
-      "seconds": 3.0954625000000013,
+      "seconds": 3.284730499999998,
       "details": {
-        "restored_completed": 19,
+        "restored_completed": 36,
         "incomplete_transition_discarded": true
       }
     },
     {
       "name": "Cancel, reset, model changes and stale-generation response rejection",
       "status": "passed",
-      "seconds": 0.36405570799999987,
+      "seconds": 0.35807104099999926,
       "details": {
-        "cancelled_completed": 33,
+        "cancelled_completed": 43,
         "stale_response_ignored": true
       }
     },
     {
       "name": "CSV parsing, explicit columns, finite validation and local regression import",
       "status": "passed",
-      "seconds": 0.20035270800000216,
+      "seconds": 0.4155152080000007,
       "details": {
         "imported_rows": 3,
         "invalid_fixtures_rejected": 3
@@ -101,7 +101,7 @@
     {
       "name": "Actual VI UI, independent-fit summaries and objective plot",
       "status": "passed",
-      "seconds": 0.9736970419999997,
+      "seconds": 1.369857666,
       "details": {
         "fits": 2,
         "iterations": 75
@@ -110,7 +110,7 @@
     {
       "name": "JSON and CSV exports, validated import, local save / load / delete",
       "status": "passed",
-      "seconds": 0.391700417,
+      "seconds": 0.8654735419999997,
       "details": {
         "retained": 60,
         "round_trip": "checkpoint schema validated in Python"
@@ -119,7 +119,7 @@
     {
       "name": "Recorded transitions, branch-aware replay, PNG export and method comparison",
       "status": "passed",
-      "seconds": 1.748972708000001,
+      "seconds": 1.7471759999999994,
       "details": {
         "recorded_transitions": 8,
         "coordinates": "scaled working x; selected endpoint from recorded metadata"
@@ -128,7 +128,7 @@
     {
       "name": "Centered/noncentered and mixture initialization comparisons use compatible targets",
       "status": "passed",
-      "seconds": 1.5312173750000038,
+      "seconds": 1.781729041999999,
       "details": {
         "funnel": "common model coordinates; separate coverage, divergences and integration costs",
         "mixture": "separate initializations and chain occupancy"
@@ -137,7 +137,7 @@
     {
       "name": "Native checkpoint import derives model identity and references from Python",
       "status": "passed",
-      "seconds": 0.8173491670000003,
+      "seconds": 1.0678852909999987,
       "details": {
         "envelope": "native snapshot",
         "retained": 3,
@@ -147,7 +147,7 @@
     {
       "name": "Cancellation during an expensive transition and forced recovery are transactional",
       "status": "passed",
-      "seconds": 3.546255207999995,
+      "seconds": 6.799044249999999,
       "details": {
         "dimension": 32,
         "deterministic_nodes": 90,
@@ -161,7 +161,7 @@
     {
       "name": "Narrow-screen layout, keyboard navigation, reduced motion and guide",
       "status": "passed",
-      "seconds": 0.35186316700000314,
+      "seconds": 0.3452060830000046,
       "details": {
         "viewport": "390 × 844",
         "horizontal_overflow": false,
@@ -171,7 +171,7 @@
     {
       "name": "Runtime asset failure is explicit and retry recovers",
       "status": "passed",
-      "seconds": 3.542544750000001,
+      "seconds": 3.0657537920000033,
       "details": {
         "failed_asset": "runtime/pyodide.mjs",
         "retry": "new worker loaded successfully"
@@ -180,7 +180,7 @@
     {
       "name": "No uncaught browser exceptions or failed static assets",
       "status": "passed",
-      "seconds": 0.00004800000000250293,
+      "seconds": 0.00004783300000417512,
       "details": {
         "page_errors": 0,
         "console_errors": 0,
@@ -191,7 +191,7 @@
   "measurements": [
     {
       "kind": "cold_load",
-      "wall_seconds": 2.877783084
+      "wall_seconds": 2.9175823750000003
     },
     {
       "kind": "ui_run",
@@ -221,7 +221,7 @@
         "acceptance_sum": 14.585801275085894,
         "transitions": 20,
         "retained_transitions": 10,
-        "elapsed_seconds": 0.09489999999999998,
+        "elapsed_seconds": 0.09970000100000043,
         "gradient_evaluations": 105,
         "mean_acceptance": 0.7292900637542947
       },
@@ -317,7 +317,7 @@
         "acceptance_sum": 1371.8335613819515,
         "transitions": 1600,
         "retained_transitions": 800,
-        "elapsed_seconds": 14.777400000000004,
+        "elapsed_seconds": 14.872299995,
         "gradient_evaluations": 7707,
         "mean_acceptance": 0.8573959758637197
       },
@@ -330,7 +330,7 @@
         "phase": "sampling"
       },
       "status": "complete",
-      "wall_seconds_including_ui": 15.596927625000001,
+      "wall_seconds_including_ui": 15.9253825,
       "model_hash": "cd9652be333fa0dfe7d3abddd535de41e26624fc262e076ef5723c4e612bc4cc",
       "dimension": 1,
       "observations": 10,
@@ -357,7 +357,7 @@
         "acceptance_sum": 47.19002271077481,
         "transitions": 56,
         "retained_transitions": 32,
-        "elapsed_seconds": 0.1565000000000012,
+        "elapsed_seconds": 0.15970000100000092,
         "gradient_evaluations": 285,
         "mean_acceptance": 0.8426789769781217
       },
@@ -400,7 +400,7 @@
         "acceptance_sum": 0,
         "transitions": 0,
         "retained_transitions": 0,
-        "elapsed_seconds": 0.26069999999999993,
+        "elapsed_seconds": 0.26390000000000313,
         "gradient_evaluations": 536,
         "mean_acceptance": 0
       },
@@ -443,7 +443,7 @@
         "acceptance_sum": 45.80144270054426,
         "transitions": 56,
         "retained_transitions": 32,
-        "elapsed_seconds": 0.13129999999999953,
+        "elapsed_seconds": 0.14390000100000222,
         "gradient_evaluations": 324,
         "mean_acceptance": 0.8178829053668617
       },
@@ -486,7 +486,7 @@
         "acceptance_sum": 0,
         "transitions": 0,
         "retained_transitions": 0,
-        "elapsed_seconds": 0.18290000000000006,
+        "elapsed_seconds": 0.1830999999999996,
         "gradient_evaluations": 536,
         "mean_acceptance": 0
       },
@@ -529,7 +529,7 @@
         "acceptance_sum": 47.252569139184,
         "transitions": 56,
         "retained_transitions": 32,
-        "elapsed_seconds": 0.18659999999999854,
+        "elapsed_seconds": 0.19180000100000072,
         "gradient_evaluations": 718,
         "mean_acceptance": 0.8437958774854285
       },
@@ -572,7 +572,7 @@
         "acceptance_sum": 0,
         "transitions": 0,
         "retained_transitions": 0,
-        "elapsed_seconds": 0.12839999999999918,
+        "elapsed_seconds": 0.13090000000000046,
         "gradient_evaluations": 536,
         "mean_acceptance": 0
       },
@@ -615,7 +615,7 @@
         "acceptance_sum": 47.163594363874665,
         "transitions": 56,
         "retained_transitions": 32,
-        "elapsed_seconds": 0.3874999999999993,
+        "elapsed_seconds": 0.3993000000000002,
         "gradient_evaluations": 872,
         "mean_acceptance": 0.8422070422120476
       },
@@ -658,7 +658,7 @@
         "acceptance_sum": 0,
         "transitions": 0,
         "retained_transitions": 0,
-        "elapsed_seconds": 0.22739999999999938,
+        "elapsed_seconds": 0.22749999999999915,
         "gradient_evaluations": 536,
         "mean_acceptance": 0
       },
@@ -701,7 +701,7 @@
         "acceptance_sum": 46.876064860318074,
         "transitions": 56,
         "retained_transitions": 32,
-        "elapsed_seconds": 0.2254000000000005,
+        "elapsed_seconds": 0.2234999999999978,
         "gradient_evaluations": 439,
         "mean_acceptance": 0.8370725867913942
       },
@@ -744,7 +744,7 @@
         "acceptance_sum": 0,
         "transitions": 0,
         "retained_transitions": 0,
-        "elapsed_seconds": 0.2441999999999993,
+        "elapsed_seconds": 0.23859999900000162,
         "gradient_evaluations": 536,
         "mean_acceptance": 0
       },
@@ -803,7 +803,7 @@
         "acceptance_sum": 0,
         "transitions": 0,
         "retained_transitions": 0,
-        "elapsed_seconds": 0.5064000000000002,
+        "elapsed_seconds": 0.5114999989999989,
         "gradient_evaluations": 1712,
         "mean_acceptance": 0
       },

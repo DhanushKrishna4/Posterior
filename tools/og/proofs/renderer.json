@@ -1,0 +1,9 @@
+{
+  "chromium": "151.0.7922.34",
+  "rasterization": "CPU (--disable-gpu)",
+  "colorProfile": "sRGB",
+  "deviceScaleFactor": 2,
+  "outputScale": 1,
+  "animation": "none",
+  "externalRequests": "blocked"
+}

@@ -33,6 +33,7 @@ jobs:
       - run: npm ci
       - run: npm run vendor
       - run: npm run build
+      - run: npm run test:og
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
         env:

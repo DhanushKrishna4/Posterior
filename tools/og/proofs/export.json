@@ -1,0 +1,24 @@
+{
+  "image": "public/posterior-og-v1.png",
+  "width": 1200,
+  "height": 630,
+  "mode": "RGB",
+  "color_space": "sRGB",
+  "bytes": 111810,
+  "sha256": "b5a86d4587d8a2d9291dca7b38506c09c0b43e02d158b750d8929439289f63ca",
+  "source": "tools/og/compose.py",
+  "vector": "tools/og/card.svg",
+  "reference": {
+    "prior": [
+      2,
+      2
+    ],
+    "successes": 7,
+    "trials": 10,
+    "posterior": [
+      9,
+      5
+    ],
+    "kind": "exact conjugate update; not sampler output"
+  }
+}

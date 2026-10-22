@@ -141,6 +141,10 @@ The public [Pages workbench](https://dhanushkrishna4.github.io/Posterior/) is de
 
 The GitHub Actions workflow checks Python, builds, tests the production browser, and prepares a Pages artifact. Publishing is an **explicit manual workflow dispatch** with `deploy: true` after configuring Pages to use GitHub Actions. Push/PR checks do not publish. Repository name/path changes require updating `base` in `vite.config.js` and rerunning subpath checks.
 
+## Sharing card
+
+The static [Open Graph card](public/posterior-og-v1.png) uses the workbench's exact Beta–Binomial update. [Editable artwork, composition studies, export instructions and sharing-size proofs](tools/og/README.md) are included. Regenerate with `npm run og:render`; verify production metadata and the PNG with `npm run test:og` after building. Website metadata and GitHub's repository social-preview upload are separate settings.
+
 ## Architecture
 
 ```mermaid

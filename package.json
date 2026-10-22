@@ -10,7 +10,9 @@
     "build": "node scripts/build-web.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test:browser": "node scripts/browser-check.mjs",
-    "test:redesign": "node scripts/redesign-check.mjs"
+    "test:redesign": "node scripts/redesign-check.mjs",
+    "og:render": "node tools/og/export.mjs",
+    "test:og": "node scripts/check-og.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.55.1",

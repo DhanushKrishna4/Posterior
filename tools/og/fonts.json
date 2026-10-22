@@ -1,0 +1,14 @@
+{
+  "serif": {
+    "filename": "Georgia.ttf",
+    "sha256": "4f54eb299fccea7f103edeb0d92437359bfd4441811d53222b82b335369f6218"
+  },
+  "italic": {
+    "filename": "Georgia Italic.ttf",
+    "sha256": "7758840cacb7382db65aa038e9fd1194d077ba9b55fe748f9cfb196d2773ac4e"
+  },
+  "sans": {
+    "filename": "HelveticaNeue.ttc",
+    "sha256": "f589d70dc741853a336fcb0d11aa1505d1646898fba2340a0f5999ea920406b3"
+  }
+}

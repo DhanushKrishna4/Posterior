@@ -16,7 +16,8 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    # Playwright 1.55.1 supports Ubuntu 24.04; the moving latest image can be newer.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -55,7 +56,7 @@ jobs:
     # Publishing is an explicit manual action. Pushes and PRs verify only.
     if: github.event_name == 'workflow_dispatch' && inputs.deploy
     needs: verify
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
